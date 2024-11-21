@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Container from "./../common/Container";
 import Flex from "./../common/Flex";
 import Image from "./../common/Image";
@@ -7,8 +7,36 @@ import ListItem from "./../common/ListItem";
 import { Link } from "react-router-dom";
 
 const Navigation = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    // console.log(offset);
+
+    if (offset > 20) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  // useEffect(() => {
+  //   document.addEventListener("click", (e) => {
+  //     menuRef.current.contains(e.target) ? setToggle(true) : setToggle(false);
+  //     popupRef.current.contains(e.target) ? setPopup(true) : setPopup(false);
+  //   });
+  // }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <nav className="fixed left-0 top-0 w-full bg-transparent py-5 duration-300 ease-in-out">
+    <nav
+      className={`${scrolled ? "bg-black py-4" : "bg-transparent py-10"} fixed left-0 top-0 z-[99999999] w-full duration-300 ease-in-out`}
+    >
       <Container>
         <Flex className="items-center justify-between">
           <div className="w-4/12">
