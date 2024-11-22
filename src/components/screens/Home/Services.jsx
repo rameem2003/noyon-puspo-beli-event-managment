@@ -29,7 +29,7 @@ const Services = () => {
                 className="h-full w-full"
               />
 
-              <div className="absolute left-0 top-0 flex h-0 w-full items-center justify-center bg-primary/80 bg-white duration-300 ease-in-out group-hover:h-full">
+              <div className="absolute left-0 top-0 flex h-0 w-full items-center justify-center bg-primary/80 duration-300 ease-in-out group-hover:h-full">
                 <div className="duration-300 ease-in-out">
                   <h3 className="scale-0 text-center text-4xl font-bold text-white duration-300 ease-in-out group-hover:scale-100">
                     {data.title}
