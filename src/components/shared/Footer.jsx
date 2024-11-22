@@ -130,6 +130,15 @@ const Footer = () => {
             </div>
           </div>
         </Flex>
+
+        <div className="mt-5 text-center">
+          <a
+            className="text-white"
+            href="https://www.facebook.com/rolstudiobangladesh"
+          >
+            &copy; Developed by Mahmood Hassan Rameem || ROL Studio || 2024
+          </a>
+        </div>
       </Container>
     </footer>
   );
