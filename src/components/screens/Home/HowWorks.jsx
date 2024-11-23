@@ -7,7 +7,7 @@ const HowWorks = () => {
   return (
     <section className="my-20">
       <Container>
-        <h2 className="mb-5 font-bold leading-[40px] text-primary xl:text-2xl 2xl:text-3xl">
+        <h2 className="mb-5 text-2xl font-bold leading-[40px] text-primary 2xl:text-3xl">
           How we deal with our clients?
         </h2>
         <p className="text-base font-semibold">
@@ -15,10 +15,11 @@ const HowWorks = () => {
           door step
         </p>
 
-        <Flex className="mt-10 items-center justify-between">
+        <Flex className="mt-10 flex-wrap items-center justify-between gap-5">
           <div
-            data-aos="zoom-out-right"
-            className="group flex w-[28%] cursor-pointer flex-col items-center gap-5 rounded-lg px-5 py-10 shadow-xl duration-300 ease-in-out hover:scale-[1.1]"
+            // data-aos="zoom-out-right"
+            data-aos="zoom-in-down"
+            className="group flex w-full cursor-pointer flex-col items-center gap-5 rounded-lg px-5 py-10 shadow-xl duration-300 ease-in-out hover:scale-[1.1] md:w-[48%] lg:w-[28%]"
           >
             <Image
               className="h-[120px] w-[120px] group-hover:animate-customBouns"
@@ -34,8 +35,9 @@ const HowWorks = () => {
           </div>
 
           <div
-            data-aos="fade-down"
-            className="group flex w-[28%] cursor-pointer flex-col items-center gap-5 rounded-lg px-5 py-10 shadow-xl duration-300 ease-in-out hover:scale-[1.1]"
+            // data-aos="fade-down"
+            data-aos="zoom-in-down"
+            className="group flex w-full cursor-pointer flex-col items-center gap-5 rounded-lg px-5 py-10 shadow-xl duration-300 ease-in-out hover:scale-[1.1] md:w-[48%] lg:w-[28%]"
           >
             <Image
               className="h-[120px] w-[120px] group-hover:animate-customBouns"
@@ -52,8 +54,9 @@ const HowWorks = () => {
           </div>
 
           <div
-            data-aos="zoom-out-left"
-            className="group flex w-[28%] cursor-pointer flex-col items-center gap-5 rounded-lg px-5 py-10 shadow-xl duration-300 ease-in-out hover:scale-[1.1]"
+            // data-aos="zoom-out-left"
+            data-aos="zoom-in-down"
+            className="group flex w-full cursor-pointer flex-col items-center gap-5 rounded-lg px-5 py-10 shadow-xl duration-300 ease-in-out hover:scale-[1.1] md:w-[48%] lg:w-[28%]"
           >
             <Image
               className="h-[120px] w-[120px] group-hover:animate-customBouns"

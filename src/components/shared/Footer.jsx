@@ -18,18 +18,18 @@ const Footer = () => {
   return (
     <footer className="bg-primary py-10">
       <Container>
-        <h2 className="text-center font-bold uppercase text-white xl:text-3xl">
+        <h2 className="text-center text-xl font-bold uppercase text-white xl:text-3xl">
           Contact Us
         </h2>
 
-        <h2 className="mt-5 text-center font-extrabold text-white xl:text-5xl">
+        <h2 className="mt-5 text-center text-3xl font-extrabold text-white xl:text-5xl">
           +8801743612520
         </h2>
 
-        <Flex className="mt-10 gap-5">
-          <div className="w-3/12">
+        <Flex className="mt-10 flex-col flex-wrap gap-5 md:flex-row lg:flex-nowrap">
+          <div className="w-full md:w-[48%] xl:w-3/12">
             <Image
-              className="h-[200px] w-[200px]"
+              className="mx-auto h-[200px] w-[200px] md:ml-0"
               src="/footerlogo.png"
               alt="logo"
             />
@@ -42,43 +42,43 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <div className="w-3/12">
+          <div className="w-full md:w-[48%] xl:w-3/12">
             <h2 className="mb-10 text-2xl font-semibold text-white">
               Our Sevices
             </h2>
 
             <List>
-              <ListItem className="mb-2 flex items-center gap-1 text-base font-semibold text-white">
+              <ListItem className="mb-2 flex items-center gap-1 text-sm font-semibold text-white xl:text-base">
                 <FaDotCircle />
                 <span>Event Decoration</span>
               </ListItem>
-              <ListItem className="mb-2 flex items-center gap-1 text-base font-semibold text-white">
+              <ListItem className="mb-2 flex items-center gap-1 text-sm font-semibold text-white xl:text-base">
                 <FaDotCircle />
                 <span>Decorator</span>
               </ListItem>
-              <ListItem className="mb-2 flex items-center gap-1 text-base font-semibold text-white">
+              <ListItem className="mb-2 flex items-center gap-1 text-sm font-semibold text-white xl:text-base">
                 <FaDotCircle />
                 <span>Sound & Lighting</span>
               </ListItem>
-              <ListItem className="mb-2 flex items-center gap-1 text-base font-semibold text-white">
+              <ListItem className="mb-2 flex items-center gap-1 text-sm font-semibold text-white xl:text-base">
                 <FaDotCircle />
                 <span>Vehicle</span>
               </ListItem>
-              <ListItem className="mb-2 flex items-center gap-1 text-base font-semibold text-white">
+              <ListItem className="mb-2 flex items-center gap-1 text-sm font-semibold text-white xl:text-base">
                 <FaDotCircle />
                 <span>Photography & Cinematography</span>
               </ListItem>
-              <ListItem className="mb-2 flex items-center gap-1 text-base font-semibold text-white">
+              <ListItem className="mb-2 flex items-center gap-1 text-sm font-semibold text-white xl:text-base">
                 <FaDotCircle />
                 <span>Entertainment</span>
               </ListItem>
-              <ListItem className="mb-2 flex items-center gap-1 text-base font-semibold text-white">
+              <ListItem className="mb-2 flex items-center gap-1 text-sm font-semibold text-white xl:text-base">
                 <FaDotCircle />
                 <span>Music, Sound System and Band show</span>
               </ListItem>
             </List>
           </div>
-          <div className="w-2/12">
+          <div className="w-full md:w-[48%] xl:w-2/12">
             <h2 className="mb-10 text-2xl font-semibold text-white">
               Visit us
             </h2>
@@ -101,7 +101,7 @@ const Footer = () => {
               </ListItem>
             </List>
           </div>
-          <div className="w-4/12">
+          <div className="w-full md:w-[48%] xl:w-4/12">
             <h2 className="mb-10 text-2xl font-semibold text-white">Support</h2>
 
             <div className="">
@@ -110,7 +110,7 @@ const Footer = () => {
               </p>
               <p className="text-base font-normal text-white">+8801743612520</p>
               <p className="text-base font-normal text-white">
-                noyonpushpobelieventmanagement@gmail.com
+                {/* noyonpushpobelieventmanagement@gmail.com */}
               </p>
 
               <div className="mt-5">

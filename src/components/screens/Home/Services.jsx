@@ -10,7 +10,7 @@ const Services = () => {
   return (
     <div className="my-20">
       <Container>
-        <h2 className="mb-5 font-bold leading-[40px] text-primary xl:text-2xl 2xl:text-3xl">
+        <h2 className="mb-5 text-2xl font-bold leading-[40px] text-primary 2xl:text-3xl">
           Get all services
         </h2>
         <p className="text-base font-semibold">
@@ -20,8 +20,9 @@ const Services = () => {
         <Flex className="mt-10 flex-wrap items-center justify-between">
           {services.slice(0, 6).map((data, i) => (
             <div
+              key={i}
               data-aos="zoom-in-down"
-              className="group relative mb-10 h-[280px] w-[32%] overflow-hidden rounded-lg shadow-xl duration-300 ease-in-out"
+              className="group relative mx-auto mb-10 h-[280px] w-full overflow-hidden rounded-lg shadow-xl duration-300 ease-in-out sm:w-[80%] md:w-[48%] xl:w-[32%]"
             >
               <Image
                 src={data.thumb}
@@ -40,7 +41,10 @@ const Services = () => {
           ))}
 
           <div className="mt-2 flex w-full items-center justify-center">
-            <Link className="mx-auto inline-flex items-center gap-2 rounded-lg border-[3px] border-black px-10 py-3 font-semibold text-black duration-300 ease-in-out hover:gap-4 hover:border-primary hover:bg-primary hover:text-white xl:text-base 2xl:text-lg">
+            <Link
+              to="/services"
+              className="mx-auto inline-flex items-center gap-2 rounded-lg border-[3px] border-black px-10 py-3 font-semibold text-black duration-300 ease-in-out hover:gap-4 hover:border-primary hover:bg-primary hover:text-white xl:text-base 2xl:text-lg"
+            >
               Load More <FaArrowRight />
             </Link>
           </div>

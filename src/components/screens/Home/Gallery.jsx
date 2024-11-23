@@ -67,14 +67,14 @@ const Gallery = () => {
   return (
     <section className="my-10">
       <Container>
-        <Flex className="gap-10">
-          <div data-aos="fade-right" className="w-6/12">
-            <h2 className="mb-5 font-bold leading-[40px] text-primary xl:text-2xl 2xl:text-3xl">
+        <Flex className="flex-col gap-10 md:flex-row">
+          <div data-aos="fade-right" className="w-full md:w-1/2">
+            <h2 className="mb-5 text-xl font-bold leading-[40px] text-primary xl:text-2xl 2xl:text-3xl">
               Arrange program in your own way, we make it hassle free and
               affordable for you.
             </h2>
 
-            <p className="text-justify text-xl font-medium">
+            <p className="text-justify text-base font-medium xl:text-xl">
               Design your program exactly the way you envision it – we’re here
               to make the entire process smooth, hassle-free, and
               budget-friendly. Whether you’re creating something from scratch or
@@ -86,12 +86,12 @@ const Gallery = () => {
               life. Your goals, your way – made easy and accessible by us.
             </p>
 
-            <Link className="mt-10 inline-flex items-center gap-2 rounded-lg border-[3px] border-black px-10 py-3 font-semibold text-black duration-300 ease-in-out hover:gap-4 hover:border-primary hover:bg-primary hover:text-white xl:text-base 2xl:text-lg">
+            <Link className="mt-10 inline-flex items-center gap-2 rounded-lg border-[3px] border-black px-10 py-3 text-sm font-semibold text-black duration-300 ease-in-out hover:gap-4 hover:border-primary hover:bg-primary hover:text-white xl:text-base 2xl:text-lg">
               View Our Events <FaArrowRight />
             </Link>
           </div>
 
-          <div data-aos="fade-left" className="w-6/12">
+          <div data-aos="zoom-in-down" className="w-full md:w-1/2">
             <Slider {...settings}>
               <Image
                 className="h-full w-full rounded-lg object-cover"
