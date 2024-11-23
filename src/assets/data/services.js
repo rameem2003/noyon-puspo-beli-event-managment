@@ -26,7 +26,7 @@ export const services = [
   },
   {
     title: "Music, Sound System and Band show",
-    thumb: "/slides/slide12.jpg",
+    thumb: "/slides/slide13.jpg",
   },
   {
     title: "Vehicle Rental",

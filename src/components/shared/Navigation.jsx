@@ -40,7 +40,9 @@ const Navigation = () => {
       <Container>
         <Flex className="items-center justify-between">
           <div className="w-4/12">
-            <Image src="/logo.jpg" className="h-[80px] w-[80px]" />
+            <Link to="/">
+              <Image src="/logo.jpg" className="h-[80px] w-[80px]" />
+            </Link>
           </div>
           <div className="w-8/12">
             <List className="flex items-center justify-end gap-6">
@@ -66,11 +68,16 @@ const Navigation = () => {
               </ListItem>
               <ListItem className="text-xl font-semibold text-white">
                 <Link to="/services" className="">
-                  Collaborators
+                  Our Journey
                 </Link>
               </ListItem>
               <ListItem className="text-xl font-semibold text-white">
                 <Link to="/services" className="">
+                  Collaborators
+                </Link>
+              </ListItem>
+              <ListItem className="text-xl font-semibold text-white">
+                <Link to="/contact" className="">
                   Contact
                 </Link>
               </ListItem>

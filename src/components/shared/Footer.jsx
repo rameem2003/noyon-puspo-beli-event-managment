@@ -4,8 +4,15 @@ import Flex from "../common/Flex";
 import Image from "../common/Image";
 import List from "./../common/List";
 import ListItem from "./../common/ListItem";
-import { FaDotCircle, FaFacebook } from "react-icons/fa";
+import {
+  FaDotCircle,
+  FaFacebook,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AiFillInstagram, AiFillTikTok } from "react-icons/ai";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 const Footer = () => {
   return (
@@ -78,13 +85,19 @@ const Footer = () => {
 
             <List>
               <ListItem className="mb-2 flex items-center gap-1 text-base font-semibold text-white">
-                <Link to="/">Event Decoration</Link>
+                <Link to="/">Home</Link>
               </ListItem>
               <ListItem className="mb-2 flex items-center gap-1 text-base font-semibold text-white">
-                <Link to="/">Decorator</Link>
+                <Link to="/">About</Link>
               </ListItem>
               <ListItem className="mb-2 flex items-center gap-1 text-base font-semibold text-white">
-                <Link to="/">Sound & Lighting</Link>
+                <Link to="/">Recent Events</Link>
+              </ListItem>
+              <ListItem className="mb-2 flex items-center gap-1 text-base font-semibold text-white">
+                <Link to="/">Collaborators</Link>
+              </ListItem>
+              <ListItem className="mb-2 flex items-center gap-1 text-base font-semibold text-white">
+                <Link to="/">Contact</Link>
               </ListItem>
             </List>
           </div>
@@ -95,34 +108,65 @@ const Footer = () => {
               <p className="text-lg font-semibold text-white">
                 Contact us for any kind of support 24/7.
               </p>
-              <p className="text-base font-normal text-white">+8804544848484</p>
+              <p className="text-base font-normal text-white">+8801743612520</p>
               <p className="text-base font-normal text-white">
-                letstalk@utshob.xyz
+                noyonpushpobelieventmanagement@gmail.com
               </p>
 
               <div className="mt-5">
                 <p className="text-lg font-semibold text-white">Address</p>
                 <p className="text-base font-normal text-white">
-                  Rojonigondha, 105/7, Mohakhali Dakkhinpara, Banani, Dhaka
-                  -1212
+                  Mirpur-10, Porbota Tower(Ground Floor),Beside Exim
+                  Bank,Metrorail Piller No- 250, Begum Rokeya
+                  Sharani, Dhaka-1216
                 </p>
               </div>
 
               <Flex className="mt-5">
                 <List className="flex items-center gap-5">
                   <ListItem>
-                    <a className="text-2xl text-white" href="http://">
+                    <a
+                      className="text-2xl text-white"
+                      target="_blank"
+                      href="https://www.facebook.com/FlowerAndDecorationService?mibextid=LQQJ4d"
+                    >
                       <FaFacebook />
                     </a>
                   </ListItem>
                   <ListItem>
-                    <a className="text-2xl text-white" href="http://">
-                      <FaFacebook />
+                    <a
+                      className="text-3xl text-white"
+                      target="_blank"
+                      href="http://wa.me/8801743612520"
+                    >
+                      <IoLogoWhatsapp />
                     </a>
                   </ListItem>
                   <ListItem>
-                    <a className="text-2xl text-white" href="http://">
-                      <FaFacebook />
+                    <a
+                      className="text-3xl text-white"
+                      target="_blank"
+                      href="https://www.instagram.com/bdeve_nt?igsh=MmE0N3B0aGVrNTd4&utm_source=qr"
+                    >
+                      <AiFillInstagram />
+                    </a>
+                  </ListItem>
+                  <ListItem>
+                    <a
+                      className="text-3xl text-white"
+                      target="_blank"
+                      href="https://youtube.com/@noyonpushpobeli-eventmanag3809?si=TetEAbFE0bOe8Hmb"
+                    >
+                      <FaYoutube />
+                    </a>
+                  </ListItem>
+                  <ListItem>
+                    <a
+                      className="text-3xl text-white"
+                      target="_blank"
+                      href="https://www.tiktok.com/@noyon.pushpo.beli?_t=8ra2hJevlLU&_r=1"
+                    >
+                      <AiFillTikTok />
                     </a>
                   </ListItem>
                 </List>
