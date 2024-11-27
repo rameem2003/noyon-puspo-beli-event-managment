@@ -1,71 +1,124 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Container from "../components/common/Container";
 import Flex from "../components/common/Flex";
-import Image from "../components/common/Image";
+import { Link } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <main className="h-screen w-full bg-bgScreen pt-[100px]">
+    <main>
+      <section className="bg-banner bg-cover bg-bottom bg-no-repeat py-[150px] xl:py-[200px]">
+        <Container>
+          <Flex className="items-center gap-10">
+            <div data-aos="fade-right" className="w-full lg:w-1/2">
+              <h1 className="text-4xl font-extrabold leading-[60px] text-white 2xl:text-5xl">
+                About us
+              </h1>
+
+              <p className="mt-5 text-lg font-medium text-white">
+                Your Vision, Our Expertise
+              </p>
+            </div>
+          </Flex>
+        </Container>
+      </section>
+
       <Container>
-        <h2 className=" font-sans font-semibold text-base sm:text-xl xl:text-3xl text-white capitalize">
-          This starter template contains
-        </h2>
-
-        <Flex className=" mt-5 xl:mt-[100px] items-center gap-7 flex-wrap justify-center">
-          <div className=" flex items-center justify-center gap-5 flex-col  p-5 w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] xl:w-[200px] xl:h-[200px] rounded-lg bg-white/30">
-            <Image
-              className="w-[70%] mx-auto"
-              src="https://vitejs.dev/logo.svg"
-            />
-
-            <h2 className=" font-sans font-bold text-xs sm:text-lg xl:text-2xl text-center text-white">
-              Vite
+        <div className="mx-auto py-12">
+          {/* Expertise Section */}
+          <section className="mb-12">
+            <h2 className="mb-6 text-3xl font-bold text-primary">
+              Our Expertise
             </h2>
-          </div>
-          <div className=" flex items-center justify-center gap-5 flex-col  p-5 w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] xl:w-[200px] xl:h-[200px] rounded-lg bg-white/30">
-            <Image
-              className="w-[70%] mx-auto"
-              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K"
-            />
-
-            <h2 className=" font-sans font-bold text-xs sm:text-lg xl:text-2xl text-center text-white">
-              React JS
+            <p className="text-lg leading-relaxed">
+              At <strong>noyon puspo beli event management</strong>, we bring{" "}
+              <strong>15 years of industry experience</strong> to every project.
+              Whether it's a wedding, corporate event, or social celebration,
+              our team is dedicated to making your dreams a reality.
+              <strong>Every event is crafted</strong> with care, precision, and
+              creativity to reflect your unique personality and style.
+            </p>
+          </section>
+          {/* Services Section */}
+          <section className="mb-12">
+            <h2 className="mb-6 text-3xl font-bold text-primary">
+              Our Services
             </h2>
-          </div>
-
-          <div className=" flex items-center justify-center gap-5 flex-col  p-5 w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] xl:w-[200px] xl:h-[200px] rounded-lg bg-white/30">
-            <Image
-              className="w-[90%] mx-auto"
-              src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg"
-            />
-
-            <h2 className=" font-sans font-bold text-xs sm:text-lg xl:text-2xll text-center text-white">
-              Tailwind CSS
+            <ul className="list-disc space-y-4 pl-6 text-lg">
+              <li>
+                <strong>Wedding Perfection:</strong>
+                Let us make your wedding day unforgettable with seamless
+                planning. From venue selection to decor, catering, and
+                entertainment, we ensure every moment feels magical.
+              </li>
+              <li>
+                <strong>Corporate Brilliance:</strong>
+                Need a professional touch? We excel in organizing corporate
+                events, conferences, and seminars that leave a lasting
+                impression on your attendees.
+              </li>
+              <li>
+                <strong>Social Celebrations:</strong>
+                Birthdays, anniversaries, themed parties—we create vibrant
+                atmospheres where your guests can celebrate and make
+                unforgettable memories.
+              </li>
+              <li>
+                <strong>Event Consultation:</strong>
+                Planning your event but need expert guidance? Our consultants
+                provide valuable insights and practical tips to help you plan
+                like a pro.
+              </li>
+            </ul>
+          </section>
+          {/* Why Choose Us Section */}
+          <section>
+            <h2 className="mb-6 text-3xl font-bold text-primary">
+              Why Choose Us?
             </h2>
+            <ul className="list-disc space-y-4 pl-6 text-lg">
+              <li>
+                <strong>Creative Vision:</strong>
+                Our unique and imaginative approach ensures every event stands
+                out.
+              </li>
+              <li>
+                <strong>Meticulous Attention:</strong>
+                We focus on every detail, from stunning floral arrangements to
+                impeccable table settings.
+              </li>
+              <li>
+                <strong>Stress-Free Planning:</strong>
+                Sit back and relax! Our team takes care of logistics, so you can
+                enjoy the experience.
+              </li>
+              <li>
+                <strong>Trusted Vendors:</strong>
+                Benefit from our extensive network of reliable vendors for
+                top-quality services at the best prices.
+              </li>
+              <li>
+                <strong>Budget-Friendly Solutions:</strong>
+                We design packages that provide the best value for your
+                investment without compromising quality.
+              </li>
+            </ul>
+          </section>
+          {/* Call to Action */}
+          <div className="mt-12 text-center">
+            <Link
+              to="/contact"
+              className="mt-10 inline-flex items-center gap-2 rounded-lg border-[3px] border-black px-10 py-3 text-sm font-semibold text-black duration-300 ease-in-out hover:gap-4 hover:border-primary hover:bg-primary hover:text-white xl:text-base 2xl:text-lg"
+            >
+              Contact us <FaArrowRight />
+            </Link>
           </div>
-
-          <div className=" flex items-center justify-center gap-5 flex-col  p-5 w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] xl:w-[200px] xl:h-[200px] rounded-lg bg-white/30">
-            <Image
-              className="w-[60%] mx-auto"
-              src="https://raw.githubusercontent.com/react-icons/react-icons/master/react-icons.svg"
-            />
-
-            <h2 className=" font-sans font-bold text-xs sm:text-lg xl:text-2xl text-center text-white">
-              React Icons
-            </h2>
-          </div>
-
-          <div className=" flex items-center justify-center gap-5 flex-col  p-5 w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] xl:w-[200px] xl:h-[200px] rounded-lg bg-white/30">
-            <Image
-              className="w-[60%] mx-auto"
-              src="https://reactrouter.com/_brand/react-router-mark-color-inverted.png"
-            />
-
-            <h2 className=" font-sans font-bold text-xs sm:text-lg xl:text-2xl text-center text-white">
-              React Router DOM
-            </h2>
-          </div>
-        </Flex>
+        </div>
       </Container>
     </main>
   );

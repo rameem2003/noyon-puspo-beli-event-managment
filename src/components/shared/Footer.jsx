@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AiFillInstagram, AiFillTikTok } from "react-icons/ai";
-import { IoLogoWhatsapp } from "react-icons/io";
+import { IoLogoWhatsapp, IoMdMail } from "react-icons/io";
 
 const Footer = () => {
   return (
@@ -109,9 +109,6 @@ const Footer = () => {
                 Contact us for any kind of support 24/7.
               </p>
               <p className="text-base font-normal text-white">+8801743612520</p>
-              <p className="text-base font-normal text-white">
-                {/* noyonpushpobelieventmanagement@gmail.com */}
-              </p>
 
               <div className="mt-5">
                 <p className="text-lg font-semibold text-white">Address</p>
@@ -124,6 +121,15 @@ const Footer = () => {
 
               <Flex className="mt-5">
                 <List className="flex items-center gap-5">
+                  <ListItem>
+                    <a
+                      className="text-3xl text-white"
+                      target="_blank"
+                      href="mailto:noyonpushpobelieventmanagement@gmail.com"
+                    >
+                      <IoMdMail />
+                    </a>
+                  </ListItem>
                   <ListItem>
                     <a
                       className="text-2xl text-white"

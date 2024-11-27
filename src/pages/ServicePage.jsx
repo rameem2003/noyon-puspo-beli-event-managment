@@ -12,11 +12,11 @@ const ServicePage = () => {
   }, []);
   return (
     <main>
-      <section className="bg-banner bg-cover bg-bottom bg-no-repeat py-[200px]">
+      <section className="bg-banner bg-cover bg-bottom bg-no-repeat py-[150px] xl:py-[200px]">
         <Container>
           <Flex className="items-center gap-10">
-            <div data-aos="fade-right" className="w-1/2">
-              <h1 className="font-extrabold leading-[60px] text-white xl:text-4xl 2xl:text-5xl">
+            <div data-aos="fade-right" className="w-full lg:w-1/2">
+              <h1 className="text-4xl font-extrabold leading-[60px] text-white 2xl:text-5xl">
                 Our Services
               </h1>
 
@@ -33,7 +33,7 @@ const ServicePage = () => {
           {services.map((data, i) => (
             <div
               data-aos="zoom-in-down"
-              className="group relative mb-10 h-[280px] w-[32%] overflow-hidden rounded-lg shadow-xl duration-300 ease-in-out"
+              className="group relative mx-auto mb-10 h-[280px] w-full overflow-hidden rounded-lg shadow-xl duration-300 ease-in-out sm:w-[80%] md:w-[48%] xl:w-[32%]"
             >
               <Image
                 src={data.thumb}

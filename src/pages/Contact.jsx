@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 import List from "../components/common/List";
 import ListItem from "../components/common/ListItem";
 import { FaFacebook, FaYoutube } from "react-icons/fa";
-import { IoLogoWhatsapp } from "react-icons/io";
+import { IoLogoWhatsapp, IoMdMail } from "react-icons/io";
 import { AiFillInstagram, AiFillTikTok } from "react-icons/ai";
 
 const Contact = () => {
@@ -15,11 +15,11 @@ const Contact = () => {
   }, []);
   return (
     <main>
-      <section className="bg-banner bg-cover bg-bottom bg-no-repeat py-[200px]">
+      <section className="bg-banner bg-cover bg-bottom bg-no-repeat py-[150px] xl:py-[200px]">
         <Container>
           <Flex className="items-center gap-10">
-            <div data-aos="fade-right" className="w-1/2">
-              <h1 className="font-extrabold leading-[60px] text-white xl:text-4xl 2xl:text-5xl">
+            <div data-aos="fade-right" className="w-full lg:w-1/2">
+              <h1 className="text-4xl font-extrabold leading-[60px] text-white 2xl:text-5xl">
                 Contact with us
               </h1>
 
@@ -33,8 +33,8 @@ const Contact = () => {
 
       <section className="my-20">
         <Container>
-          <Flex className="items-center">
-            <div className="w-6/12">
+          <Flex className="flex-col items-center gap-10 lg:flex-row">
+            <div className="w-full lg:w-6/12">
               <h2 className="mb-10 text-2xl font-semibold text-black">
                 Support
               </h2>
@@ -45,9 +45,6 @@ const Contact = () => {
                 </p>
                 <p className="text-base font-normal text-black">
                   +8801743612520
-                </p>
-                <p className="text-base font-normal text-black">
-                  noyonpushpobelieventmanagement@gmail.com
                 </p>
 
                 <div className="mt-5">
@@ -61,6 +58,15 @@ const Contact = () => {
 
                 <Flex className="mt-5">
                   <List className="flex items-center gap-5">
+                    <ListItem>
+                      <a
+                        className="text-3xl text-black"
+                        target="_blank"
+                        href="mailto:noyonpushpobelieventmanagement@gmail.com"
+                      >
+                        <IoMdMail />
+                      </a>
+                    </ListItem>
                     <ListItem>
                       <a
                         className="text-2xl text-black"
@@ -111,10 +117,10 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="w-6/12">
+            <div className="w-full lg:w-6/12">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d228.1466809320758!2d90.36918775932834!3d23.806260561933815!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c1016c7079e5%3A0xcb8d3e137aa78f13!2z4Kao4Kav4Ka84KaoIOCmquCngeCmt-CnjeCmqiDgpqzgp4fgprLgpr8t4KaH4Kat4KeH4Kao4KeN4KafIOCmruCnjeCmr-CmvuCmqOCnh-CmnOCmruCnh-CmqOCnjeCmnw!5e0!3m2!1sbn!2sbd!4v1732335868912!5m2!1sbn!2sbd"
-                width="600"
+                width="100%"
                 height="450"
                 style={{ border: 0 }}
                 allowfullscreen=""
