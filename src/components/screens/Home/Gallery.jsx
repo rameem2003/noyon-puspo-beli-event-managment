@@ -74,7 +74,7 @@ const Gallery = () => {
               affordable for you.
             </h2>
 
-            <p className="text-justify text-base font-medium xl:text-xl">
+            <p className="text-justify text-base font-normal xl:text-xl">
               Design your program exactly the way you envision it – we’re here
               to make the entire process smooth, hassle-free, and
               budget-friendly. Whether you’re creating something from scratch or
