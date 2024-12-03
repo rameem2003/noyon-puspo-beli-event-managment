@@ -98,10 +98,10 @@ const Navigation = () => {
               <ListItem className="text-xl font-semibold text-white">
                 <Link
                   onClick={() => setToggle(false)}
-                  to="/services"
+                  to="/pricing"
                   className=""
                 >
-                  Our Journey
+                  Pricing
                 </Link>
               </ListItem>
               <ListItem className="text-xl font-semibold text-white">
