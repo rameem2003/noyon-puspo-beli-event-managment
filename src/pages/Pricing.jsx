@@ -208,22 +208,34 @@ const Pricing = () => {
 
           <div className="container mx-auto px-4 py-8">
             <h3 className="my-5 text-center text-5xl font-bold text-primary">
-              General Pool
+              Music and Band Concert
             </h3>
 
-            <Flex className="flex-wrap gap-5 xl:flex-nowrap">
+            <p className="mt-4 text-center text-xl font-medium text-black">
+              Make your party outstanding with our attractive packages!
+            </p>
+
+            <div className="my-5 rounded-lg border bg-gray-100 p-6 shadow-md">
+              <p className="text-lg font-semibold text-red-500">🌺 Note:</p>
+              <p className="mt-2 text-lg">
+                (All of are Inside dhaka) Outside Payable by address
+              </p>
+            </div>
+
+            <Flex className="mt-5 flex-wrap gap-5 xl:flex-nowrap">
               {/* Package 1 */}
+
               <div
                 data-aos="fade-up"
                 data-aos-duration="3000"
                 className="group mb-8 w-full rounded-lg border-2 border-green-400 bg-white p-6 shadow-md duration-300 ease-in-out hover:bg-green-600 sm:w-[48%] lg:w-[30%] xl:w-[25%]"
               >
                 <h2 className="text-2xl font-bold text-green-600 group-hover:text-white">
-                  🟩 Package 1:
+                  🟩 Music Band show :
                 </h2>
 
                 <h3 className="text-2xl font-extrabold text-green-600 group-hover:text-white">
-                  14,800 BDT
+                  39,499 BDT
                 </h3>
 
                 <p className="mt-4 text-lg font-medium group-hover:text-white">
@@ -231,151 +243,70 @@ const Pricing = () => {
                 </p>
                 <ul className="mt-2 list-disc space-y-2 pl-6 text-lg">
                   <li className="text-black group-hover:text-white">
-                    ➡ A stage design
+                    🔊 2 pair out
                   </li>
                   <li className="text-black group-hover:text-white">
-                    ➡ Stage sofa
+                    🎙️ 2 pair monitor
                   </li>
                   <li className="text-black group-hover:text-white">
-                    ➡ Stage carpet
+                    💡 2 setup pargoan lights
                   </li>
                   <li className="text-black group-hover:text-white">
-                    ➡ Entry gate
+                    🌫️ Smoke machine
                   </li>
                   <li className="text-black group-hover:text-white">
-                    ➡ Proper lighting
+                    🥁 Drums setup
+                  </li>
+                  <li className="text-black group-hover:text-white">
+                    🎸 Bassiem
+                  </li>
+                  <li className="text-black group-hover:text-white">
+                    🎸 Leadium
+                  </li>
+                  <li className="text-black group-hover:text-white">
+                    🎤 Unlimited microphones
+                  </li>
+                  <li className="text-black group-hover:text-white">
+                    🔌 Unlimited guitar cables
+                  </li>
+                  <li className="text-black group-hover:text-white">
+                    🔌 Unlimited short cables
                   </li>
                 </ul>
               </div>
+
               {/* Package 2 */}
               <div
                 data-aos="fade-up"
                 data-aos-duration="3000"
-                className="group mb-8 w-full rounded-lg border-2 border-red-400 bg-white p-6 shadow-md duration-300 ease-in-out hover:bg-red-600 sm:w-[48%] lg:w-[30%] xl:w-[25%]"
+                className="group mb-8 w-full rounded-lg border-2 border-blue-400 bg-white p-6 shadow-md duration-300 ease-in-out hover:bg-blue-600 sm:w-[48%] lg:w-[30%] xl:w-[25%]"
               >
-                <h2 className="text-2xl font-bold text-red-600 group-hover:text-white">
-                  🟥 Package 2:
+                <h2 className="text-2xl font-bold text-blue-600 group-hover:text-white">
+                  🟦 Kawali Music Band Show:
                 </h2>
-                <h3 className="text-2xl font-extrabold text-red-600 group-hover:text-white">
-                  24,500 BDT
+
+                <h3 className="text-2xl font-extrabold text-blue-600 group-hover:text-white">
+                  44,499 BDT
                 </h3>
+
                 <p className="mt-4 text-lg font-medium group-hover:text-white">
                   What’s included:
                 </p>
                 <ul className="mt-2 list-disc space-y-2 pl-6 text-lg">
                   <li className="text-black group-hover:text-white">
-                    ➡ A stage design
+                    🔊 2 Pair Sound
                   </li>
                   <li className="text-black group-hover:text-white">
-                    ➡ Stage sofa
+                    🎙️ 2 Pair Monitor
                   </li>
                   <li className="text-black group-hover:text-white">
-                    ➡ Stage carpet
+                    🎤 Unlimited Microphones
                   </li>
                   <li className="text-black group-hover:text-white">
-                    ➡ Entry gate
+                    🔌 Unlimited Short Cables
                   </li>
                   <li className="text-black group-hover:text-white">
-                    ➡ Photobooth
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Proper lighting
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Walkway carpet (30 ft)
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Welcome banner
-                  </li>
-                </ul>
-              </div>
-              {/* Package 3 */}
-              <div
-                data-aos="fade-up"
-                data-aos-duration="3000"
-                className="group mb-8 w-full rounded-lg border-2 border-yellow-400 bg-white p-6 shadow-md duration-300 ease-in-out hover:bg-yellow-600 sm:w-[48%] lg:w-[30%] xl:w-[25%]"
-              >
-                <h2 className="text-2xl font-bold text-yellow-600 group-hover:text-white">
-                  🟨 Package 3:
-                </h2>
-                <h3 className="text-2xl font-extrabold text-yellow-600 group-hover:text-white">
-                  39,500 BDT
-                </h3>
-                <p className="mt-4 text-lg font-medium group-hover:text-white">
-                  What’s included:
-                </p>
-                <ul className="mt-2 list-disc space-y-2 pl-6 text-lg">
-                  <li className="text-black group-hover:text-white">
-                    ➡ A stage design
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Stage sofa
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Stage carpet
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Entry gate
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Photobooth
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Walkway carpet + decoration (50 ft)
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Welcome banner
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Proper lighting
-                  </li>
-                </ul>
-              </div>
-              {/* Package 4 */}
-              <div
-                data-aos="fade-up"
-                data-aos-duration="3000"
-                className="group mb-8 w-full rounded-lg border-2 border-orange-400 bg-white p-6 shadow-md duration-300 ease-in-out hover:bg-orange-600 sm:w-[48%] lg:w-[30%] xl:w-[25%]"
-              >
-                <h2 className="text-2xl font-bold text-orange-600 group-hover:text-white">
-                  🟧 Package 4:
-                </h2>
-                <h3 className="text-2xl font-extrabold text-orange-600 group-hover:text-white">
-                  59,500 BDT
-                </h3>
-                <p className="mt-4 text-lg font-medium group-hover:text-white">
-                  What’s included:
-                </p>
-                <ul className="mt-2 list-disc space-y-2 pl-6 text-lg">
-                  <li className="text-black group-hover:text-white">
-                    ➡ A stage design
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Stage sofa
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Stage carpet/PVC flooring
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Entry gate
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Photobooth
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Stage ceiling
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Walkway carpet + decoration (50 ft)
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Welcome banner
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Flower shower
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Proper lighting
+                    🎹 Unlimited Keyboard Cables
                   </li>
                 </ul>
               </div>

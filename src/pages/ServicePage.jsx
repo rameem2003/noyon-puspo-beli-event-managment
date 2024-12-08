@@ -2,13 +2,20 @@ import React, { useEffect } from "react";
 import Container from "../components/common/Container";
 import Flex from "../components/common/Flex";
 import Image from "../components/common/Image";
+import { services } from "../assets/data/services";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { services } from "../assets/data/services";
 
 const ServicePage = () => {
   useEffect(() => {
     AOS.init();
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }, []);
   return (
     <main>

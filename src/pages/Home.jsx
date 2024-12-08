@@ -11,6 +11,13 @@ const Home = () => {
   useEffect(() => {
     AOS.init();
   }, []);
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
   return (
     <main>
       <Banner />
