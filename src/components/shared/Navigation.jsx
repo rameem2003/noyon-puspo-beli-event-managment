@@ -110,7 +110,7 @@ const Navigation = () => {
                   to="/services"
                   className=""
                 >
-                  Collaborators
+                  Bridal Special
                 </Link>
               </ListItem>
               <ListItem className="text-xl font-semibold text-white">

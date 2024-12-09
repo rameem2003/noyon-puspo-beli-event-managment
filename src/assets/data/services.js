@@ -1,10 +1,10 @@
 export const services = [
   {
-    title: "Event Decor",
+    title: "Interior Decor",
     thumb: "/slides/slide2.JPG",
   },
   {
-    title: "Decorator Service",
+    title: "Outside Decor",
     thumb: "/slides/slide11.jpg",
   },
 
@@ -21,7 +21,7 @@ export const services = [
     thumb: "/slides/slide9.jpg",
   },
   {
-    title: "Gift Packaging",
+    title: "Bridal Special",
     thumb: "/slides/slide10.jpg",
   },
   {
@@ -30,6 +30,6 @@ export const services = [
   },
   {
     title: "Vehicle Rental",
-    thumb: "/slides/slide2.JPG",
+    thumb: "/slides/slide14.jpg",
   },
 ];

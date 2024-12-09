@@ -3,6 +3,7 @@ import Container from "../components/common/Container";
 import Flex from "../components/common/Flex";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { packages } from "../assets/data/packages";
 const Pricing = () => {
   useEffect(() => {
     AOS.init();
@@ -35,174 +36,44 @@ const Pricing = () => {
               Why wait? Choose your preferred package now!
             </p>
 
-            <Flex className="mt-5 flex-wrap gap-5 xl:flex-nowrap">
-              {/* Package 1 */}
-              <div
-                data-aos="fade-up"
-                data-aos-duration="3000"
-                className="group mb-8 w-full rounded-lg border-2 border-green-400 bg-white p-6 shadow-md duration-300 ease-in-out hover:bg-green-600 sm:w-[48%] lg:w-[30%] xl:w-[25%]"
-              >
-                <h2 className="text-2xl font-bold text-green-600 group-hover:text-white">
-                  🟩 Package 1:
-                </h2>
+            <Flex className="mt-5 flex-wrap justify-between gap-5">
+              {packages.generalPool.map((item, i) => (
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="3000"
+                  className={`group mb-8 w-full rounded-lg border-2 ${item.color} bg-white p-6 shadow-md duration-300 ease-in-out sm:w-[48%] lg:w-[30%] xl:w-[23%]`}
+                >
+                  <h2
+                    className={`text-2xl font-bold ${item.textColor} group-hover:text-white`}
+                  >
+                    {item.name}
+                  </h2>
 
-                <h3 className="text-2xl font-extrabold text-green-600 group-hover:text-white">
-                  14,800 BDT
-                </h3>
+                  <h3
+                    className={`text-2xl font-extrabold ${item.textColor} group-hover:text-white`}
+                  >
+                    {item.price}
+                  </h3>
 
-                <p className="mt-4 text-lg font-medium group-hover:text-white">
-                  What’s included:
-                </p>
-                <ul className="mt-2 list-disc space-y-2 pl-6 text-lg">
-                  <li className="text-black group-hover:text-white">
-                    ➡ A stage design
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Stage sofa
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Stage carpet
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Entry gate
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Proper lighting
-                  </li>
-                </ul>
-              </div>
-              {/* Package 2 */}
-              <div
-                data-aos="fade-up"
-                data-aos-duration="3000"
-                className="group mb-8 w-full rounded-lg border-2 border-red-400 bg-white p-6 shadow-md duration-300 ease-in-out hover:bg-red-600 sm:w-[48%] lg:w-[30%] xl:w-[25%]"
-              >
-                <h2 className="text-2xl font-bold text-red-600 group-hover:text-white">
-                  🟥 Package 2:
-                </h2>
-                <h3 className="text-2xl font-extrabold text-red-600 group-hover:text-white">
-                  24,500 BDT
-                </h3>
-                <p className="mt-4 text-lg font-medium group-hover:text-white">
-                  What’s included:
-                </p>
-                <ul className="mt-2 list-disc space-y-2 pl-6 text-lg">
-                  <li className="text-black group-hover:text-white">
-                    ➡ A stage design
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Stage sofa
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Stage carpet
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Entry gate
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Photobooth
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Proper lighting
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Walkway carpet (30 ft)
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Welcome banner
-                  </li>
-                </ul>
-              </div>
-              {/* Package 3 */}
-              <div
-                data-aos="fade-up"
-                data-aos-duration="3000"
-                className="group mb-8 w-full rounded-lg border-2 border-yellow-400 bg-white p-6 shadow-md duration-300 ease-in-out hover:bg-yellow-600 sm:w-[48%] lg:w-[30%] xl:w-[25%]"
-              >
-                <h2 className="text-2xl font-bold text-yellow-600 group-hover:text-white">
-                  🟨 Package 3:
-                </h2>
-                <h3 className="text-2xl font-extrabold text-yellow-600 group-hover:text-white">
-                  39,500 BDT
-                </h3>
-                <p className="mt-4 text-lg font-medium group-hover:text-white">
-                  What’s included:
-                </p>
-                <ul className="mt-2 list-disc space-y-2 pl-6 text-lg">
-                  <li className="text-black group-hover:text-white">
-                    ➡ A stage design
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Stage sofa
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Stage carpet
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Entry gate
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Photobooth
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Walkway carpet + decoration (50 ft)
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Welcome banner
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Proper lighting
-                  </li>
-                </ul>
-              </div>
-              {/* Package 4 */}
-              <div
-                data-aos="fade-up"
-                data-aos-duration="3000"
-                className="group mb-8 w-full rounded-lg border-2 border-orange-400 bg-white p-6 shadow-md duration-300 ease-in-out hover:bg-orange-600 sm:w-[48%] lg:w-[30%] xl:w-[25%]"
-              >
-                <h2 className="text-2xl font-bold text-orange-600 group-hover:text-white">
-                  🟧 Package 4:
-                </h2>
-                <h3 className="text-2xl font-extrabold text-orange-600 group-hover:text-white">
-                  59,500 BDT
-                </h3>
-                <p className="mt-4 text-lg font-medium group-hover:text-white">
-                  What’s included:
-                </p>
-                <ul className="mt-2 list-disc space-y-2 pl-6 text-lg">
-                  <li className="text-black group-hover:text-white">
-                    ➡ A stage design
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Stage sofa
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Stage carpet/PVC flooring
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Entry gate
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Photobooth
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Stage ceiling
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Walkway carpet + decoration (50 ft)
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Welcome banner
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Flower shower
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Proper lighting
-                  </li>
-                </ul>
-              </div>
+                  <button
+                    onClick={() => bookNow("general-pool-package-1")}
+                    className={`my-2 w-full rounded-md border-[2px] border-white ${item.button} p-3 text-xl font-semibold text-white`}
+                  >
+                    Book Now
+                  </button>
+
+                  <p className="mt-4 text-lg font-medium group-hover:text-white">
+                    What’s included:
+                  </p>
+                  <ul className="mt-2 list-disc space-y-2 pl-6 text-lg">
+                    {item.features.map((d, i) => (
+                      <li className="text-black group-hover:text-white">
+                        ➡ {d}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </Flex>
           </div>
 
@@ -222,94 +93,44 @@ const Pricing = () => {
               </p>
             </div>
 
-            <Flex className="mt-5 flex-wrap gap-5 xl:flex-nowrap">
-              {/* Package 1 */}
+            <Flex className="mt-5 flex-wrap gap-5">
+              {packages.music_and_band_concert.map((item, i) => (
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="3000"
+                  className={`group mb-8 w-full rounded-lg border-2 ${item.color} bg-white p-6 shadow-md duration-300 ease-in-out sm:w-[48%] lg:w-[30%] xl:w-[23%]`}
+                >
+                  <h2
+                    className={`text-2xl font-bold ${item.textColor} group-hover:text-white`}
+                  >
+                    {item.name}
+                  </h2>
 
-              <div
-                data-aos="fade-up"
-                data-aos-duration="3000"
-                className="group mb-8 w-full rounded-lg border-2 border-green-400 bg-white p-6 shadow-md duration-300 ease-in-out hover:bg-green-600 sm:w-[48%] lg:w-[30%] xl:w-[25%]"
-              >
-                <h2 className="text-2xl font-bold text-green-600 group-hover:text-white">
-                  🟩 Music Band show :
-                </h2>
+                  <h3
+                    className={`text-2xl font-extrabold ${item.textColor} group-hover:text-white`}
+                  >
+                    {item.price}
+                  </h3>
 
-                <h3 className="text-2xl font-extrabold text-green-600 group-hover:text-white">
-                  39,499 BDT
-                </h3>
+                  <button
+                    onClick={() => bookNow("general-pool-package-1")}
+                    className={`my-2 w-full rounded-md border-[2px] border-white ${item.button} p-3 text-xl font-semibold text-white`}
+                  >
+                    Book Now
+                  </button>
 
-                <p className="mt-4 text-lg font-medium group-hover:text-white">
-                  What’s included:
-                </p>
-                <ul className="mt-2 list-disc space-y-2 pl-6 text-lg">
-                  <li className="text-black group-hover:text-white">
-                    🔊 2 pair out
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    🎙️ 2 pair monitor
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    💡 2 setup pargoan lights
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    🌫️ Smoke machine
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    🥁 Drums setup
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    🎸 Bassiem
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    🎸 Leadium
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    🎤 Unlimited microphones
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    🔌 Unlimited guitar cables
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    🔌 Unlimited short cables
-                  </li>
-                </ul>
-              </div>
-
-              {/* Package 2 */}
-              <div
-                data-aos="fade-up"
-                data-aos-duration="3000"
-                className="group mb-8 w-full rounded-lg border-2 border-blue-400 bg-white p-6 shadow-md duration-300 ease-in-out hover:bg-blue-600 sm:w-[48%] lg:w-[30%] xl:w-[25%]"
-              >
-                <h2 className="text-2xl font-bold text-blue-600 group-hover:text-white">
-                  🟦 Kawali Music Band Show:
-                </h2>
-
-                <h3 className="text-2xl font-extrabold text-blue-600 group-hover:text-white">
-                  44,499 BDT
-                </h3>
-
-                <p className="mt-4 text-lg font-medium group-hover:text-white">
-                  What’s included:
-                </p>
-                <ul className="mt-2 list-disc space-y-2 pl-6 text-lg">
-                  <li className="text-black group-hover:text-white">
-                    🔊 2 Pair Sound
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    🎙️ 2 Pair Monitor
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    🎤 Unlimited Microphones
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    🔌 Unlimited Short Cables
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    🎹 Unlimited Keyboard Cables
-                  </li>
-                </ul>
-              </div>
+                  <p className="mt-4 text-lg font-medium group-hover:text-white">
+                    What’s included:
+                  </p>
+                  <ul className="mt-2 list-disc space-y-2 pl-6 text-lg">
+                    {item.features.map((d, i) => (
+                      <li className="text-black group-hover:text-white">
+                        ➡ {d}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </Flex>
           </div>
 
@@ -324,41 +145,43 @@ const Pricing = () => {
             </p>
 
             <Flex className="mt-5 flex-wrap gap-5 xl:flex-nowrap">
-              {/* Package 1 */}
-              <div
-                data-aos="fade-up"
-                data-aos-duration="3000"
-                className="group mb-8 w-full rounded-lg border-2 border-green-400 bg-white p-6 shadow-md duration-300 ease-in-out hover:bg-green-600 sm:w-[48%] lg:w-[30%] xl:w-[25%]"
-              >
-                <h2 className="text-2xl font-bold text-green-600 group-hover:text-white">
-                  🟩 Package 1:
-                </h2>
+              {packages.birthday_event_decoration.map((item, i) => (
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="3000"
+                  className={`group mb-8 w-full rounded-lg border-2 ${item.color} bg-white p-6 shadow-md duration-300 ease-in-out sm:w-[48%] lg:w-[30%] xl:w-[23%]`}
+                >
+                  <h2
+                    className={`text-2xl font-bold ${item.textColor} group-hover:text-white`}
+                  >
+                    {item.name}
+                  </h2>
 
-                <h3 className="text-2xl font-extrabold text-green-600 group-hover:text-white">
-                  6,000 BDT up to 40,499 BDT
-                </h3>
+                  <h3
+                    className={`text-2xl font-extrabold ${item.textColor} group-hover:text-white`}
+                  >
+                    {item.price}
+                  </h3>
 
-                <p className="mt-4 text-lg font-medium group-hover:text-white">
-                  What’s included:
-                </p>
-                <ul className="mt-2 list-disc space-y-2 pl-6 text-lg">
-                  <li className="text-black group-hover:text-white">
-                    ➡ Balloon Decorations
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Letter Balloons
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Prices are based on the design complexity.
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Customization options available to suit your preferences.
-                  </li>
-                  <li className="text-black group-hover:text-white">
-                    ➡ Service available inside Dhaka City.
-                  </li>
-                </ul>
-              </div>
+                  <button
+                    onClick={() => bookNow("general-pool-package-1")}
+                    className={`my-2 w-full rounded-md border-[2px] border-white ${item.button} p-3 text-xl font-semibold text-white`}
+                  >
+                    Book Now
+                  </button>
+
+                  <p className="mt-4 text-lg font-medium group-hover:text-white">
+                    What’s included:
+                  </p>
+                  <ul className="mt-2 list-disc space-y-2 pl-6 text-lg">
+                    {item.features.map((d, i) => (
+                      <li className="text-black group-hover:text-white">
+                        ➡ {d}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </Flex>
           </div>
 
