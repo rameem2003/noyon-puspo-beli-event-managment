@@ -19,7 +19,7 @@ const ServicePage = () => {
   }, []);
   return (
     <main>
-      <section className="bg-banner bg-cover bg-bottom bg-no-repeat py-[150px] xl:py-[200px]">
+      <section className="bg-banner bg-cover bg-bottom bg-no-repeat py-[150px] 2xl:py-[200px]">
         <Container>
           <Flex className="items-center gap-10">
             <div data-aos="fade-right" className="w-full lg:w-1/2">

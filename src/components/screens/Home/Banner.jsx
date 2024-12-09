@@ -7,7 +7,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Banner = () => {
   return (
-    <section className="bg-banner bg-cover bg-bottom bg-no-repeat py-[150px] md:py-[130px] xl:py-[200px]">
+    <section className="bg-banner bg-cover bg-bottom bg-no-repeat py-[150px] md:py-[130px] 2xl:py-[200px]">
       <Container>
         <Flex className="flex-col items-center md:flex-row lg:gap-10">
           <div

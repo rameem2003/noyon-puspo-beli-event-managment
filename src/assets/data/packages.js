@@ -6,6 +6,7 @@ export const packages = {
       color: "hover:bg-green-600 border-green-600",
       textColor: "text-green-600",
       button: "bg-green-600",
+      packageID: "generalPool-pack1",
       features: [
         "Stage design",
         "Stage sofa",
@@ -20,6 +21,7 @@ export const packages = {
       color: "hover:bg-red-600 border-red-600",
       textColor: "text-red-600",
       button: "bg-red-600",
+      packageID: "generalPool-pack2",
       features: [
         "Stage design",
         "Stage sofa",
@@ -37,6 +39,7 @@ export const packages = {
       color: "hover:bg-yellow-600 border-yellow-600",
       textColor: "text-yellow-600",
       button: "bg-yellow-600",
+      packageID: "generalPool-pack3",
       features: [
         "Stage design",
         "Stage sofa",
@@ -54,6 +57,7 @@ export const packages = {
       color: "hover:bg-orange-600 border-orange-600",
       textColor: "text-orange-600",
       button: "bg-orange-600",
+      packageID: "generalPool-pack4",
       features: [
         "Stage design",
         "Stage sofa",
@@ -75,6 +79,7 @@ export const packages = {
       color: "hover:bg-green-600 border-green-600",
       textColor: "text-green-600",
       button: "bg-green-600",
+      packageID: "musicandband-pack1",
       features: [
         "2 pair of sound",
         "2 pair monitors",
@@ -94,6 +99,7 @@ export const packages = {
       color: "hover:bg-blue-600 border-blue-600",
       textColor: "text-blue-600",
       button: "bg-blue-600",
+      packageID: "musicandband-pack2",
       features: [
         "2 Pair Sound",
         "2 Pair Monitors",
@@ -111,6 +117,7 @@ export const packages = {
       color: "hover:bg-green-600 border-green-600",
       textColor: "text-green-600",
       button: "bg-green-600",
+      packageID: "birthdayevent-pack1",
       features: [
         "Balloon Decorations",
         "Letter Balloons",

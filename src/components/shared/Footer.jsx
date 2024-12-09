@@ -183,6 +183,7 @@ const Footer = () => {
 
         <div className="mt-5 text-center">
           <a
+            target="_blank"
             className="text-white"
             href="https://www.facebook.com/rolstudiobangladesh"
           >

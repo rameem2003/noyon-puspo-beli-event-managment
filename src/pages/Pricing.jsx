@@ -1,16 +1,31 @@
 import React, { useEffect } from "react";
 import Container from "../components/common/Container";
 import Flex from "../components/common/Flex";
+import { packages } from "../assets/data/packages";
+import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { packages } from "../assets/data/packages";
 const Pricing = () => {
+  const navigate = useNavigate();
   useEffect(() => {
     AOS.init();
   }, []);
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
+  const bookNow = (item) => {
+    navigate("/checkout", { state: { item } });
+    console.log(item);
+  };
+
   return (
     <main>
-      <section className="bg-banner bg-cover bg-bottom bg-no-repeat py-[150px] xl:py-[200px]">
+      <section className="bg-banner bg-cover bg-bottom bg-no-repeat py-[150px] 2xl:py-[200px]">
         <Container>
           <Flex className="items-center gap-10">
             <div data-aos="fade-right" className="w-full lg:w-1/2">
@@ -39,6 +54,7 @@ const Pricing = () => {
             <Flex className="mt-5 flex-wrap justify-between gap-5">
               {packages.generalPool.map((item, i) => (
                 <div
+                  key={i}
                   data-aos="fade-up"
                   data-aos-duration="3000"
                   className={`group mb-8 w-full rounded-lg border-2 ${item.color} bg-white p-6 shadow-md duration-300 ease-in-out sm:w-[48%] lg:w-[30%] xl:w-[23%]`}
@@ -56,7 +72,7 @@ const Pricing = () => {
                   </h3>
 
                   <button
-                    onClick={() => bookNow("general-pool-package-1")}
+                    onClick={() => bookNow(item)}
                     className={`my-2 w-full rounded-md border-[2px] border-white ${item.button} p-3 text-xl font-semibold text-white`}
                   >
                     Book Now
@@ -96,6 +112,7 @@ const Pricing = () => {
             <Flex className="mt-5 flex-wrap gap-5">
               {packages.music_and_band_concert.map((item, i) => (
                 <div
+                  key={i}
                   data-aos="fade-up"
                   data-aos-duration="3000"
                   className={`group mb-8 w-full rounded-lg border-2 ${item.color} bg-white p-6 shadow-md duration-300 ease-in-out sm:w-[48%] lg:w-[30%] xl:w-[23%]`}
@@ -113,7 +130,7 @@ const Pricing = () => {
                   </h3>
 
                   <button
-                    onClick={() => bookNow("general-pool-package-1")}
+                    onClick={() => bookNow(item)}
                     className={`my-2 w-full rounded-md border-[2px] border-white ${item.button} p-3 text-xl font-semibold text-white`}
                   >
                     Book Now
@@ -147,6 +164,7 @@ const Pricing = () => {
             <Flex className="mt-5 flex-wrap gap-5 xl:flex-nowrap">
               {packages.birthday_event_decoration.map((item, i) => (
                 <div
+                  key={i}
                   data-aos="fade-up"
                   data-aos-duration="3000"
                   className={`group mb-8 w-full rounded-lg border-2 ${item.color} bg-white p-6 shadow-md duration-300 ease-in-out sm:w-[48%] lg:w-[30%] xl:w-[23%]`}
@@ -164,7 +182,7 @@ const Pricing = () => {
                   </h3>
 
                   <button
-                    onClick={() => bookNow("general-pool-package-1")}
+                    onClick={() => bookNow(item)}
                     className={`my-2 w-full rounded-md border-[2px] border-white ${item.button} p-3 text-xl font-semibold text-white`}
                   >
                     Book Now
