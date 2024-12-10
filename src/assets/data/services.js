@@ -22,7 +22,7 @@ export const services = [
   },
   {
     title: "Bridal Special",
-    thumb: "/slides/slide10.jpg",
+    thumb: "/slides/slide15.jpg",
   },
   {
     title: "Music, Sound System and Band show",

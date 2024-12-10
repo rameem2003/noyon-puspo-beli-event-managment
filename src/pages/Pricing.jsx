@@ -5,8 +5,11 @@ import { packages } from "../assets/data/packages";
 import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useDispatch } from "react-redux";
+import { pushBooking } from "../redux/features/BookingSlice";
 const Pricing = () => {
-  const navigate = useNavigate();
+  const dispatch = useDispatch(); // dispatch instance
+  const navigate = useNavigate(); // navigate instance
   useEffect(() => {
     AOS.init();
   }, []);
@@ -18,8 +21,10 @@ const Pricing = () => {
     });
   }, []);
 
+  // function for set the package for booking
   const bookNow = (item) => {
-    navigate("/checkout", { state: { item } });
+    dispatch(pushBooking(item));
+    navigate("/checkout");
     console.log(item);
   };
 
@@ -83,7 +88,7 @@ const Pricing = () => {
                   </p>
                   <ul className="mt-2 list-disc space-y-2 pl-6 text-lg">
                     {item.features.map((d, i) => (
-                      <li className="text-black group-hover:text-white">
+                      <li key={i} className="text-black group-hover:text-white">
                         ➡ {d}
                       </li>
                     ))}
@@ -141,7 +146,7 @@ const Pricing = () => {
                   </p>
                   <ul className="mt-2 list-disc space-y-2 pl-6 text-lg">
                     {item.features.map((d, i) => (
-                      <li className="text-black group-hover:text-white">
+                      <li key={i} className="text-black group-hover:text-white">
                         ➡ {d}
                       </li>
                     ))}
@@ -193,7 +198,7 @@ const Pricing = () => {
                   </p>
                   <ul className="mt-2 list-disc space-y-2 pl-6 text-lg">
                     {item.features.map((d, i) => (
-                      <li className="text-black group-hover:text-white">
+                      <li key={i} className="text-black group-hover:text-white">
                         ➡ {d}
                       </li>
                     ))}

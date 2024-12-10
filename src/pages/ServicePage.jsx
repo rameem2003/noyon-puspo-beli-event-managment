@@ -39,6 +39,7 @@ const ServicePage = () => {
         <Flex className="mt-10 flex-wrap items-center justify-between">
           {services.map((data, i) => (
             <div
+              key={i}
               data-aos="zoom-in-down"
               className="group relative mx-auto mb-10 h-[280px] w-full overflow-hidden rounded-lg shadow-xl duration-300 ease-in-out sm:w-[80%] md:w-[48%] xl:w-[32%]"
             >
