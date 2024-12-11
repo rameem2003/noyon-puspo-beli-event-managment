@@ -11,17 +11,28 @@ import ServicePage from "./pages/ServicePage";
 import Contact from "./pages/Contact";
 import Pricing from "./pages/Pricing";
 import CheckoutPage from "./pages/CheckoutPage";
+import Admin from "./pages/Admin";
+import Adminlogin from "./pages/Adminlogin";
+import Error from "./pages/Error";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Rootlayout />}>
-      <Route index element={<Home />} />
-      <Route path="/services" element={<ServicePage />} />
-      <Route path="/pricing" element={<Pricing />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/checkout" element={<CheckoutPage />} />
-    </Route>,
+    <>
+      <Route path="/" element={<Rootlayout />}>
+        <Route index element={<Home />} />
+        <Route path="/services" element={<ServicePage />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/*" element={<Error />} />
+      </Route>
+
+      <Route path="/admin">
+        <Route index element={<Admin />} />
+        <Route path="/admin/login" element={<Adminlogin />} />
+      </Route>
+    </>,
   ),
 );
 function App() {

@@ -38,7 +38,7 @@ const Navigation = () => {
   }, []);
   return (
     <nav
-      className={`${scrolled ? "bg-black py-4" : "bg-transparent py-6"} fixed left-0 top-0 z-[99999999] w-full duration-300 ease-in-out`}
+      className={`${scrolled ? "bg-black py-2" : "bg-transparent py-6"} fixed left-0 top-0 z-[99999999] w-full duration-300 ease-in-out`}
     >
       <Container>
         <Flex className="items-center justify-between">
