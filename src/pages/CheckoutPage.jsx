@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import Container from "../components/common/Container";
 import Flex from "../components/common/Flex";
 import AOS from "aos";
@@ -8,6 +9,8 @@ import { FaArrowRight } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { removeBooking } from "../redux/features/BookingSlice";
+import Swal from "sweetalert2";
+import SendingAnimation from "../components/common/SendingAnimation";
 
 const CheckoutPage = () => {
   const dispatch = useDispatch(); // dispatch instance
@@ -21,11 +24,13 @@ const CheckoutPage = () => {
   const [address, setAddress] = useState("");
   const [district, setDistrict] = useState("");
   const [err, setErr] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   // function for submit the booking
-  const handle_submit = (e) => {
+  const handle_submit = async (e) => {
     e.preventDefault();
     setErr(false);
+    setLoading(true);
 
     let booking_data = {
       name,
@@ -33,17 +38,69 @@ const CheckoutPage = () => {
       phone,
       address,
       district,
-      packageID: data.packageID,
+      packID: data.packageID,
+      package: data,
+      time: new Date().toLocaleString(),
+      timeStamp: Date.now(),
     };
 
     if (!name || !email || !phone || !address || !district) {
+      Swal.fire({
+        icon: "warning",
+        title: "Pls Provide Full Info",
+        showConfirmButton: true,
+        confirmButtonText: "Back",
+        confirmButtonColor: "#856702",
+      });
+      setLoading(false);
       setErr(true);
       return;
     }
 
-    console.log(booking_data);
+    try {
+      let res = await axios.post(
+        `${import.meta.env.VITE_BASE_URL}/api/booking/new`,
+        booking_data,
+        {
+          headers: { "Content-Type": "application/json" },
+        },
+      );
+      setLoading(false);
 
-    dispatch(removeBooking());
+      Swal.fire({
+        icon: "success",
+        title: res.data.msg,
+        showConfirmButton: true,
+        confirmButtonText: "Back to Home",
+        confirmButtonColor: "green",
+        // timer: 1500,
+      })
+        .then((result) => {
+          if (result.isConfirmed) {
+            navigate("/");
+            dispatch(removeBooking());
+          }
+        })
+        .finally(() => {
+          navigate("/");
+          dispatch(removeBooking());
+        });
+
+      console.log(res);
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+      Swal.fire({
+        icon: "error",
+        title: error.response.data.msg,
+        showConfirmButton: true,
+        confirmButtonText: "Try Again",
+        confirmButtonColor: "red",
+        // timer: 1500,
+      });
+    }
+
+    // console.log(booking_data);
   };
   useEffect(() => {
     AOS.init();
@@ -57,6 +114,7 @@ const CheckoutPage = () => {
   }, []);
   return (
     <main>
+      {loading && <SendingAnimation />}
       <section className="bg-banner bg-cover bg-bottom bg-no-repeat py-[150px] 2xl:py-[200px]">
         <Container>
           <Flex className="items-center gap-10">
@@ -75,9 +133,9 @@ const CheckoutPage = () => {
 
       <section className="my-20">
         <Container>
-          <Flex className="gap-5">
-            <div className="w-1/2">
-              <h3 className="mb-5 text-4xl font-bold text-primary">
+          <Flex className="flex-col gap-5 lg:flex-row">
+            <div className="w-full lg:w-1/2">
+              <h3 className="mb-5 text-xl font-bold text-primary lg:text-4xl">
                 Provide Your Information
               </h3>
 
@@ -188,8 +246,8 @@ const CheckoutPage = () => {
                 </button>
               </form>
             </div>
-            <div className="w-1/2">
-              <h3 className="mb-5 text-4xl font-bold text-primary">
+            <div className="w-full lg:w-1/2">
+              <h3 className="mb-5 text-xl font-bold text-primary lg:text-4xl">
                 Your Chosen Package
               </h3>
               {data ? (

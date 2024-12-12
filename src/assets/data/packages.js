@@ -94,7 +94,7 @@ export const packages = {
       ],
     },
     {
-      name: "🟦 Kawaii Music Band Show",
+      name: "🟦 Kawali Music Band Show",
       price: "44,499 BDT",
       color: "hover:bg-blue-600 border-blue-600",
       textColor: "text-blue-600",
