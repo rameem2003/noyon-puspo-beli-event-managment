@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Container from "../components/common/Container";
 import Flex from "../components/common/Flex";
+import Swal from "sweetalert2";
+import SendingAnimation from "../components/common/SendingAnimation";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { districts } from "./../assets/data/districts";
@@ -9,8 +11,6 @@ import { FaArrowRight } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { removeBooking } from "../redux/features/BookingSlice";
-import Swal from "sweetalert2";
-import SendingAnimation from "../components/common/SendingAnimation";
 
 const CheckoutPage = () => {
   const dispatch = useDispatch(); // dispatch instance

@@ -64,7 +64,7 @@ const Navigation = () => {
             </Flex>
           </div>
           <div
-            className={`absolute ${toggle ? "right-0" : "right-[-100%]"} right-0 top-[110px] h-screen w-full bg-black duration-300 ease-in-out lg:static lg:h-auto lg:w-8/12 lg:bg-transparent`}
+            className={`absolute ${toggle ? "right-0" : "right-[-100%]"} right-0 top-[90px] h-screen w-full bg-black duration-300 ease-in-out lg:static lg:h-auto lg:w-8/12 lg:bg-transparent`}
           >
             <List className="flex flex-col items-center justify-end gap-6 lg:flex-row">
               <ListItem className="text-xl font-semibold text-white">
@@ -89,7 +89,7 @@ const Navigation = () => {
               <ListItem className="text-xl font-semibold text-white">
                 <Link
                   onClick={() => setToggle(false)}
-                  to="/services"
+                  to="/events"
                   className=""
                 >
                   Recent Events
@@ -107,7 +107,7 @@ const Navigation = () => {
               <ListItem className="text-xl font-semibold text-white">
                 <Link
                   onClick={() => setToggle(false)}
-                  to="/services"
+                  to="/bridalspecial"
                   className=""
                 >
                   Bridal Special

@@ -14,6 +14,8 @@ import CheckoutPage from "./pages/CheckoutPage";
 import Admin from "./pages/Admin";
 import Adminlogin from "./pages/Adminlogin";
 import Error from "./pages/Error";
+import BridalSpecial from "./pages/BridalSpecial";
+import RecentEvents from "./pages/RecentEvents";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,6 +24,8 @@ const router = createBrowserRouter(
         <Route index element={<Home />} />
         <Route path="/services" element={<ServicePage />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/events" element={<RecentEvents />} />
+        <Route path="/bridalspecial" element={<BridalSpecial />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/checkout" element={<CheckoutPage />} />
