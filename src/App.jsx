@@ -17,6 +17,7 @@ import Error from "./pages/Error";
 import BridalSpecial from "./pages/BridalSpecial";
 import RecentEvents from "./pages/RecentEvents";
 import AdminRootLayout from "./Layouts/AdminRootLayout";
+import Bookings from "./components/screens/Admin/Bookings";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -33,8 +34,11 @@ const router = createBrowserRouter(
         <Route path="/*" element={<Error />} />
       </Route>
 
-      <Route path="/admin" element={<AdminRootLayout />}>
-        <Route index element={<Admin />} />
+      <Route path="/admin">
+        <Route path="/admin" element={<AdminRootLayout />}>
+          <Route path="/admin/home" element={<Admin />} />
+          <Route path="/admin/bookings" element={<Bookings />} />
+        </Route>
         <Route path="/admin/login" element={<Adminlogin />} />
       </Route>
     </>,

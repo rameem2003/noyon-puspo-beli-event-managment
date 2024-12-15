@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Image from "../components/common/Image";
 import ButtonAnimation from "../components/common/ButtonAnimation";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { IoEye, IoEyeOff } from "react-icons/io5";
 import { signin } from "../redux/features/AdminAuthSlice";
@@ -10,6 +10,8 @@ import { signin } from "../redux/features/AdminAuthSlice";
 const Adminlogin = () => {
   const dispatch = useDispatch(); // dispatch instance
   const navigate = useNavigate(); // navigate instance
+  const admin = useSelector((state) => state.AuthReducer.admin);
+  console.log(admin);
 
   // states for get admin name & pass
   const [userName, setUserName] = useState("");
@@ -45,13 +47,19 @@ const Adminlogin = () => {
       } else {
         setErr("");
         dispatch(signin(res.data));
-        navigate("/admin");
+        navigate("/admin/home");
       }
     } catch (error) {
       setLoading(false);
       console.log(error);
     }
   };
+
+  useEffect(() => {
+    if (admin) {
+      navigate("/admin/home");
+    }
+  });
 
   return (
     <main className="flex h-screen w-full items-center justify-between">
