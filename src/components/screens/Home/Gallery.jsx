@@ -86,7 +86,10 @@ const Gallery = () => {
               life. Your goals, your way – made easy and accessible by us.
             </p>
 
-            <Link className="mt-10 inline-flex items-center gap-2 rounded-lg border-[3px] border-black px-10 py-3 text-sm font-semibold text-black duration-300 ease-in-out hover:gap-4 hover:border-primary hover:bg-primary hover:text-white xl:text-base 2xl:text-lg">
+            <Link
+              to="/events"
+              className="mt-10 inline-flex items-center gap-2 rounded-lg border-[3px] border-black px-10 py-3 text-sm font-semibold text-black duration-300 ease-in-out hover:gap-4 hover:border-primary hover:bg-primary hover:text-white xl:text-base 2xl:text-lg"
+            >
               View Our Events <FaArrowRight />
             </Link>
           </div>
