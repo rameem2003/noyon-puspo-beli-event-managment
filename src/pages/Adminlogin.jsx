@@ -133,7 +133,7 @@ const Adminlogin = () => {
         </form>
       </div>
 
-      <p className="fixed bottom-2 right-2 text-lg text-sm font-semibold">
+      <p className="fixed bottom-2 right-2 text-sm font-semibold">
         Software Developer: Mahmood Hassan Rameem || ROL Studio
       </p>
     </main>
