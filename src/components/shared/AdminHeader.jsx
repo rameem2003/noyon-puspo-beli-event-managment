@@ -63,7 +63,7 @@ const AdminHeader = () => {
               <TbAppsFilled /> Bookings
             </NavLink>
           </ListItem>
-          {/* <ListItem className="flex-1">
+          <ListItem className="flex-1">
             <NavLink
               to="/admin/settings"
               className={({ isActive }) =>
@@ -72,7 +72,7 @@ const AdminHeader = () => {
             >
               <IoMdSettings /> Settings
             </NavLink>
-          </ListItem> */}
+          </ListItem>
         </List>
       </nav>
     </>

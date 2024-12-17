@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 const Admin = () => {
   const navigate = useNavigate(); // navigation instance
   const admin = useSelector((state) => state.AuthReducer.admin);
-  console.log(admin);
 
   useEffect(() => {
     if (!admin) {

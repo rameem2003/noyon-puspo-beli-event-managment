@@ -19,6 +19,7 @@ import RecentEvents from "./pages/RecentEvents";
 import AdminRootLayout from "./Layouts/AdminRootLayout";
 import Bookings from "./components/screens/Admin/Bookings";
 import BookingDetails from "./components/screens/Admin/BookingDetails";
+import AdminSettings from "./pages/AdminSettings";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -40,6 +41,7 @@ const router = createBrowserRouter(
           <Route path="/admin/home" element={<Admin />} />
           <Route path="/admin/bookings" element={<Bookings />} />
           <Route path="/admin/bookings/:id" element={<BookingDetails />} />
+          <Route path="/admin/settings" element={<AdminSettings />} />
         </Route>
         <Route path="/admin/login" element={<Adminlogin />} />
       </Route>
