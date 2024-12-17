@@ -8,6 +8,7 @@ import ListItem from "../common/ListItem";
 import { FaHome } from "react-icons/fa";
 import List from "../common/List";
 import { IoMdSettings } from "react-icons/io";
+import { TbAppsFilled } from "react-icons/tb";
 
 const AdminHeader = () => {
   const navigate = useNavigate(); // navigation instance
@@ -59,10 +60,10 @@ const AdminHeader = () => {
                 `flex items-center justify-center gap-2 ${isActive ? "bg-primary text-white" : "bg-white text-black"} p-2`
               }
             >
-              <FaHome /> Bookings
+              <TbAppsFilled /> Bookings
             </NavLink>
           </ListItem>
-          <ListItem className="flex-1">
+          {/* <ListItem className="flex-1">
             <NavLink
               to="/admin/settings"
               className={({ isActive }) =>
@@ -71,7 +72,7 @@ const AdminHeader = () => {
             >
               <IoMdSettings /> Settings
             </NavLink>
-          </ListItem>
+          </ListItem> */}
         </List>
       </nav>
     </>

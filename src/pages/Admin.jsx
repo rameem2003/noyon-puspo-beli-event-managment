@@ -1,13 +1,11 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { logout } from "../redux/features/AdminAuthSlice";
 import HIghLights from "../components/screens/Admin/AdminHome/HIghLights";
 import PendingList from "../components/screens/Admin/AdminHome/PendingList";
 
 const Admin = () => {
   const navigate = useNavigate(); // navigation instance
-  const dispatch = useDispatch(); // dispatch instance
   const admin = useSelector((state) => state.AuthReducer.admin);
   console.log(admin);
 

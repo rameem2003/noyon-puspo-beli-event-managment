@@ -3,12 +3,13 @@ import Flex from "../../../common/Flex";
 import { FaTimesCircle, FaUsers } from "react-icons/fa";
 import { BsFillCartFill } from "react-icons/bs";
 import { useSelector } from "react-redux";
+import { TbAppsFilled } from "react-icons/tb";
 
 const HIghLights = () => {
   const bookings = useSelector((state) => state.OrderSlice.orderList); // all bookings
 
   const pending = bookings.filter((item) => item.accepted == "pending");
-  const complete = bookings.filter((item) => item.accepted == "complete");
+  const complete = bookings.filter((item) => item.accepted == "accepted");
   const cancel = bookings.filter((item) => item.accepted == "cancel");
 
   return (
@@ -53,7 +54,7 @@ const HIghLights = () => {
             {pending.length}
           </h2>
 
-          <BsFillCartFill className="absolute bottom-2 right-2 text-5xl text-white 2xl:text-6xl" />
+          <TbAppsFilled className="absolute bottom-2 right-2 text-5xl text-white 2xl:text-6xl" />
         </div>
         <div className="relative h-[180px] w-full rounded-xl bg-red-800 p-3 sm:w-[45%] md:w-[48%] lg:w-[23%] 2xl:h-[200px]">
           <p className="font-semibold text-white xl:text-xl 2xl:text-2xl">

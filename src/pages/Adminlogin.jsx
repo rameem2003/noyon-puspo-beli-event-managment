@@ -31,7 +31,7 @@ const Adminlogin = () => {
 
     try {
       const res = await axios.post(
-        "https://smcorpapi.vercel.app/api/admin/login",
+        `${import.meta.env.VITE_BASE_URL}/api/admin/login`,
         admin,
         {
           headers: {
@@ -63,18 +63,18 @@ const Adminlogin = () => {
 
   return (
     <main className="flex h-screen w-full items-center justify-between">
-      <div className="flex h-full w-1/2 items-center justify-center bg-primary">
+      <div className="hidden h-full w-full items-center justify-center bg-primary md:flex md:w-1/2">
         <Image src="/footerlogo.png" alt="logo" />
       </div>
 
-      <div className="flex w-1/2 items-center justify-center">
+      <div className="flex w-full items-center justify-center md:w-1/2">
         <form
           onSubmit={handleLogin}
           action=""
           className="mx-auto w-full border-[1px] border-[#F0F0F0] p-2 md:w-[450px]"
         >
           <h2 className="mb-5 text-center text-2xl font-semibold">
-            Login Here
+            Welcome Admin, Login Here
           </h2>
 
           {err && <p className="text-lg font-bold text-red-500">{err}</p>}
@@ -133,7 +133,7 @@ const Adminlogin = () => {
         </form>
       </div>
 
-      <p className="fixed bottom-2 right-2 text-sm font-semibold">
+      <p className="fixed bottom-1 left-[50%] w-full translate-x-[-50%] text-center text-sm font-semibold md:bottom-2 md:right-2 md:text-right">
         Software Developer: Mahmood Hassan Rameem || ROL Studio
       </p>
     </main>
