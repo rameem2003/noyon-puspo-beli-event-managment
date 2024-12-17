@@ -1,8 +1,8 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
+import axios from "axios";
+import Flex from "../../common/Flex";
 import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import Flex from "../../common/Flex";
 import Swal from "sweetalert2";
 import SendingAnimation from "../../common/SendingAnimation";
 
@@ -111,6 +111,59 @@ const BookingDetails = () => {
         // timer: 1500,
       });
     }
+  };
+
+  // handle delete booking
+  const handleDelete = () => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      cancelButtonText: "Cancel",
+      confirmButtonColor: "red",
+      cancelButtonColor: "#856702",
+      confirmButtonText: "Yes, delete it!",
+    }).then(async (result) => {
+      setLoading(true);
+      if (result.isConfirmed) {
+        try {
+          const res = await axios.delete(
+            `${import.meta.env.VITE_BASE_URL}/api/booking/delete/${id}`,
+          );
+          console.log(res.data.msg);
+          setLoading(false);
+
+          Swal.fire({
+            title: "Deleted!",
+            text: res.data.msg,
+            icon: "success",
+            showConfirmButton: true,
+            confirmButtonText: "Ok",
+            confirmButtonColor: "#856702",
+          })
+            .then(() => {
+              navigate("/admin/bookings");
+            })
+            .finally(() => {
+              navigate("/admin/bookings");
+            });
+        } catch (error) {
+          setLoading(false);
+          console.log(error);
+          Swal.fire({
+            icon: "error",
+            title: "Try again",
+            showConfirmButton: true,
+            confirmButtonText: "Try Again",
+            confirmButtonColor: "red",
+            // timer: 1500,
+          });
+        }
+      } else {
+        setLoading(false);
+      }
+    });
   };
 
   useEffect(() => {
@@ -254,20 +307,29 @@ const BookingDetails = () => {
                 </h2>
               )}
 
-              <Flex className="items-center gap-5">
+              <div>
+                <Flex className="items-center gap-5">
+                  <button
+                    onClick={handleAccept}
+                    className="w-1/2 bg-green-600 px-5 py-2 text-lg font-semibold text-white"
+                  >
+                    Accepted
+                  </button>
+                  <button
+                    onClick={handleCancel}
+                    className="w-1/2 bg-red-600 px-5 py-2 text-lg font-semibold text-white"
+                  >
+                    Cancel
+                  </button>
+                </Flex>
+
                 <button
-                  onClick={handleAccept}
-                  className="w-1/2 bg-green-600 px-5 py-2 text-lg font-semibold text-white"
+                  onClick={handleDelete}
+                  className="mt-5 w-full bg-black px-5 py-2 text-lg font-semibold text-white"
                 >
-                  Accepted
+                  Delete Booking
                 </button>
-                <button
-                  onClick={handleCancel}
-                  className="w-1/2 bg-red-600 px-5 py-2 text-lg font-semibold text-white"
-                >
-                  Cancel
-                </button>
-              </Flex>
+              </div>
             </div>
             <div className="w-full lg:w-1/2">
               {details.package ? (

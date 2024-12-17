@@ -34,7 +34,7 @@ const HIghLights = () => {
 
       <FaUsers className=" text-6xl text-white absolute right-2 bottom-2" />
     </div> */}
-        <div className="relative h-[180px] w-full rounded-xl bg-blue-800 p-3 sm:w-[45%] md:w-[48%] lg:w-[23%] 2xl:h-[200px]">
+        <div className="relative h-[180px] w-full rounded-xl bg-green-800 p-3 sm:w-[45%] md:w-[48%] lg:w-[23%] 2xl:h-[200px]">
           <p className="font-semibold text-white xl:text-xl 2xl:text-2xl">
             Total Completed Order's
           </p>

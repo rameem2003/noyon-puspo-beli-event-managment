@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import Container from "../components/common/Container";
 import Flex from "../components/common/Flex";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import List from "../components/common/List";
 import ListItem from "../components/common/ListItem";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { FaFacebook, FaYoutube } from "react-icons/fa";
 import { IoLogoWhatsapp, IoMdMail } from "react-icons/io";
 import { AiFillInstagram, AiFillTikTok } from "react-icons/ai";

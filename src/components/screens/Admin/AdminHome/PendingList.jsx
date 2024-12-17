@@ -1,7 +1,6 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import Flex from "../../../common/Flex";
 import BookingCard from "../../../common/BookingCard";
+import { useSelector } from "react-redux";
 
 const PendingList = () => {
   const bookings = useSelector((state) => state.OrderSlice.orderList); // all bookings

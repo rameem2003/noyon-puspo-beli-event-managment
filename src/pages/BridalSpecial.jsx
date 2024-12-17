@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Container from "../components/common/Container";
 import Flex from "../components/common/Flex";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import Image from "../components/common/Image";
 import List from "../components/common/List";
 import ListItem from "../components/common/ListItem";
 import { bridalCloths, shoes } from "../assets/data/services";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const BridalSpecial = () => {
   const [slide, setSlide] = useState(0);

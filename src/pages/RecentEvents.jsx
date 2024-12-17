@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import Container from "../components/common/Container";
 import Flex from "../components/common/Flex";
 import ReactPlayer from "react-player";
 import { events } from "../assets/data/services";
 import { FaTimes } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const RecentEvents = () => {
   const [vedio, setVedio] = useState("");

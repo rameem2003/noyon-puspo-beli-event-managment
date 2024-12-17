@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import HIghLights from "../components/screens/Admin/AdminHome/HIghLights";
 import PendingList from "../components/screens/Admin/AdminHome/PendingList";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Admin = () => {
   const navigate = useNavigate(); // navigation instance

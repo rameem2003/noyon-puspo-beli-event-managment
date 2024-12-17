@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Image from "../components/common/Image";
 import ButtonAnimation from "../components/common/ButtonAnimation";
+import { signin } from "../redux/features/AdminAuthSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { IoEye, IoEyeOff } from "react-icons/io5";
-import { signin } from "../redux/features/AdminAuthSlice";
 
 const Adminlogin = () => {
   const dispatch = useDispatch(); // dispatch instance

@@ -1,12 +1,12 @@
 import React from "react";
 import Flex from "../common/Flex";
+import ListItem from "../common/ListItem";
+import List from "../common/List";
 import { useDispatch, useSelector } from "react-redux";
 import { IoLogOut } from "react-icons/io5";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { logout } from "../../redux/features/AdminAuthSlice";
-import ListItem from "../common/ListItem";
 import { FaHome } from "react-icons/fa";
-import List from "../common/List";
 import { IoMdSettings } from "react-icons/io";
 import { TbAppsFilled } from "react-icons/tb";
 
@@ -47,7 +47,7 @@ const AdminHeader = () => {
             <NavLink
               to="/admin/home"
               className={({ isActive }) =>
-                `flex items-center justify-center gap-2 ${isActive ? "bg-primary text-white" : "bg-white text-black"} p-2`
+                `flex w-full items-center justify-center gap-2 ${isActive ? "bg-primary text-white" : "bg-white text-black"} p-2`
               }
             >
               <FaHome /> Home
@@ -57,7 +57,7 @@ const AdminHeader = () => {
             <NavLink
               to="/admin/bookings"
               className={({ isActive }) =>
-                `flex items-center justify-center gap-2 ${isActive ? "bg-primary text-white" : "bg-white text-black"} p-2`
+                `flex w-full items-center justify-center gap-2 ${isActive ? "bg-primary text-white" : "bg-white text-black"} p-2`
               }
             >
               <TbAppsFilled /> Bookings

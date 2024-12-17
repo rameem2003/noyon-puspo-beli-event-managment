@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import Container from "../components/common/Container";
 import Flex from "../components/common/Flex";
 import AOS from "aos";
-import "aos/dist/aos.css";
 import Image from "../components/common/Image";
+import "aos/dist/aos.css";
 
 const Error = () => {
   useEffect(() => {

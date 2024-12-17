@@ -3,10 +3,10 @@ import Container from "../components/common/Container";
 import Flex from "../components/common/Flex";
 import { packages } from "../assets/data/packages";
 import { useNavigate } from "react-router-dom";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { useDispatch } from "react-redux";
 import { pushBooking } from "../redux/features/BookingSlice";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Pricing = () => {
   const dispatch = useDispatch(); // dispatch instance
   const navigate = useNavigate(); // navigate instance

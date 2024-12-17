@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import BookingCard from "../../common/BookingCard";
-import Container from "./../../common/Container";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const Bookings = () => {
