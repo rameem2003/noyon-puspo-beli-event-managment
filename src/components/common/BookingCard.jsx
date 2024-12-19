@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const BookingCard = ({ item }) => {
   return (
-    <div className="relative mb-2 overflow-hidden rounded-lg border-[2px] border-primary p-3">
+    <div className="relative mb-2 overflow-hidden rounded-lg border-[2px] border-primary p-2 2xl:p-3">
       <div
         className={`absolute left-0 top-0 flex h-full w-[30px] items-center justify-center ${item.accepted == "accepted" ? "bg-green-600" : item.accepted == "cancel" ? "bg-red-600" : "bg-orange-600"} `}
       >

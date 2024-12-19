@@ -59,7 +59,15 @@ const AdminSettings = () => {
           showConfirmButton: true,
           confirmButtonText: "ok",
           confirmButtonColor: "green",
-        });
+        })
+          .then(async (result) => {
+            if (result.isConfirmed) {
+              navigate("/admin/home");
+            }
+          })
+          .finally(() => {
+            navigate("/admin/home");
+          });
       } catch (error) {
         setLoading(false);
         console.log(error);
@@ -174,12 +182,16 @@ const AdminSettings = () => {
                   </h2>
                 </div>
 
-                {data.userName !== admin.userName && (
+                {data.userName !== admin.userName ? (
                   <button
                     onClick={() => handleDelete(data.adminID)}
                     className="mt-2 inline-block rounded-lg bg-red-600 px-2 py-2 text-white"
                   >
                     Delete Admin
+                  </button>
+                ) : (
+                  <button className="mt-2 inline-block rounded-lg bg-gray-500 px-2 py-2 text-white">
+                    Its you
                   </button>
                 )}
               </Flex>
