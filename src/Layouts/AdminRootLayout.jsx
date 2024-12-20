@@ -10,13 +10,13 @@ const AdminRootLayout = () => {
   const dispatch = useDispatch(); // dispatch instance
   const admin = useSelector((state) => state.AuthReducer.admin); // admin data
 
-  useEffect(() => {
-    if (admin) {
-      navigate("/admin/home");
-    } else {
-      navigate("/admin/login");
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (admin) {
+  //     navigate("/admin/home");
+  //   } else {
+  //     navigate("/admin/login");
+  //   }
+  // }, []);
   // fetch all order's
   const fetchOrders = async () => {
     let res = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/booking`);

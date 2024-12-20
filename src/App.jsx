@@ -20,6 +20,7 @@ import AdminRootLayout from "./Layouts/AdminRootLayout";
 import Bookings from "./components/screens/Admin/Bookings";
 import BookingDetails from "./components/screens/Admin/BookingDetails";
 import AdminSettings from "./pages/AdminSettings";
+import AdminProtectorRoute from "./routes/AdminProtectorRoute";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -37,11 +38,46 @@ const router = createBrowserRouter(
       </Route>
 
       <Route path="/admin">
-        <Route path="/admin" element={<AdminRootLayout />}>
-          <Route path="/admin/home" element={<Admin />} />
-          <Route path="/admin/bookings" element={<Bookings />} />
-          <Route path="/admin/bookings/:id" element={<BookingDetails />} />
-          <Route path="/admin/settings" element={<AdminSettings />} />
+        <Route
+          path="/admin"
+          element={
+            <AdminProtectorRoute>
+              <AdminRootLayout />
+            </AdminProtectorRoute>
+          }
+        >
+          <Route
+            path="/admin/home"
+            element={
+              <AdminProtectorRoute>
+                <Admin />
+              </AdminProtectorRoute>
+            }
+          />
+          <Route
+            path="/admin/bookings"
+            element={
+              <AdminProtectorRoute>
+                <Bookings />
+              </AdminProtectorRoute>
+            }
+          />
+          <Route
+            path="/admin/bookings/:id"
+            element={
+              <AdminProtectorRoute>
+                <BookingDetails />
+              </AdminProtectorRoute>
+            }
+          />
+          <Route
+            path="/admin/settings"
+            element={
+              <AdminProtectorRoute>
+                <AdminSettings />
+              </AdminProtectorRoute>
+            }
+          />
         </Route>
         <Route path="/admin/login" element={<Adminlogin />} />
       </Route>

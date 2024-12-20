@@ -8,11 +8,11 @@ const Admin = () => {
   const navigate = useNavigate(); // navigation instance
   const admin = useSelector((state) => state.AuthReducer.admin);
 
-  useEffect(() => {
-    if (!admin) {
-      navigate("/admin/login");
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (!admin) {
+  //     navigate("/admin/login");
+  //   }
+  // }, []);
 
   return (
     <main>

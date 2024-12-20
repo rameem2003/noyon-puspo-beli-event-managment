@@ -171,9 +171,9 @@ const BookingDetails = () => {
   }, []);
 
   useEffect(() => {
-    if (!admin) {
-      navigate("/admin/login");
-    }
+    // if (!admin) {
+    //   navigate("/admin/login");
+    // }
   }, [details]);
   return (
     <main>

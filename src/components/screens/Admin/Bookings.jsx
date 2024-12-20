@@ -25,11 +25,11 @@ const Bookings = () => {
     setStatus(list);
   }, [bookings]);
 
-  useEffect(() => {
-    if (!admin) {
-      navigate("/admin/login");
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (!admin) {
+  //     navigate("/admin/login");
+  //   }
+  // }, []);
   return (
     <main>
       <div className="mx-auto w-[90%]">

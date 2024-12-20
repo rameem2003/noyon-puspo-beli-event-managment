@@ -47,6 +47,7 @@ const Adminlogin = () => {
       } else {
         setErr("");
         dispatch(signin(res.data));
+        localStorage.setItem("token", res.data.token);
         navigate("/admin/home");
       }
     } catch (error) {

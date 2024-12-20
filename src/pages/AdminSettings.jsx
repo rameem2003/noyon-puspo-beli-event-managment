@@ -151,11 +151,11 @@ const AdminSettings = () => {
     getAllAdmins();
   }, []);
 
-  useEffect(() => {
-    if (!admin) {
-      navigate("/admin/login");
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (!admin) {
+  //     navigate("/admin/login");
+  //   }
+  // }, []);
   return (
     <main>
       {loading && <SendingAnimation />}
