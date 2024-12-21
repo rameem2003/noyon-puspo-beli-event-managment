@@ -14,7 +14,7 @@ const Banner = () => {
             data-aos="fade-right"
             className="w-full text-center md:w-1/2 md:text-left"
           >
-            <h1 className="text-2xl font-extrabold leading-[40px] text-white md:leading-[30px] lg:leading-[60px] xl:text-4xl 2xl:text-5xl">
+            <h1 className="text-2xl font-extrabold leading-[40px] text-white md:leading-[30px] lg:text-2xl lg:leading-[40px] xl:text-4xl 2xl:text-5xl">
               The Most Trusted Event Management Platform in Bangladesh. Ensuring
               of Quality & Convenience.
             </h1>

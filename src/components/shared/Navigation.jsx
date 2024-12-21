@@ -42,7 +42,7 @@ const Navigation = () => {
     >
       <Container>
         <Flex className="items-center justify-between">
-          <div className="w-full lg:w-4/12">
+          <div className="w-full lg:w-3/12">
             <Flex className="items-center justify-between">
               <Link to="/">
                 <Image src="/logo.jpg" className="h-[80px] w-[80px]" />
@@ -64,20 +64,20 @@ const Navigation = () => {
             </Flex>
           </div>
           <div
-            className={`absolute ${toggle ? "right-0" : "right-[-100%]"} right-0 top-[90px] h-screen w-full bg-black duration-300 ease-in-out lg:static lg:h-auto lg:w-8/12 lg:bg-transparent`}
+            className={`absolute ${toggle ? "right-0" : "right-[-100%]"} right-0 top-[90px] h-screen w-full bg-black duration-300 ease-in-out lg:static lg:block lg:h-auto lg:w-9/12 lg:bg-transparent`}
           >
-            <List className="flex flex-col items-center justify-end gap-6 lg:flex-row">
-              <ListItem className="text-xl font-semibold text-white">
+            <List className="flex translate-y-40 flex-col items-center justify-end gap-6 lg:translate-y-0 lg:flex-row">
+              <ListItem className="text-3xl font-medium text-white lg:text-lg xl:text-xl xl:font-semibold">
                 <Link onClick={() => setToggle(false)} to="/" className="">
                   Home
                 </Link>
               </ListItem>
-              <ListItem className="text-xl font-semibold text-white">
+              <ListItem className="text-3xl font-medium text-white lg:text-lg xl:text-xl xl:font-semibold">
                 <Link onClick={() => setToggle(false)} to="/about" className="">
                   About
                 </Link>
               </ListItem>
-              <ListItem className="text-xl font-semibold text-white">
+              <ListItem className="text-3xl font-medium text-white lg:text-lg xl:text-xl xl:font-semibold">
                 <Link
                   onClick={() => setToggle(false)}
                   to="/services"
@@ -86,7 +86,7 @@ const Navigation = () => {
                   Services
                 </Link>
               </ListItem>
-              <ListItem className="text-xl font-semibold text-white">
+              <ListItem className="text-3xl font-medium text-white lg:text-lg xl:text-xl xl:font-semibold">
                 <Link
                   onClick={() => setToggle(false)}
                   to="/events"
@@ -95,16 +95,7 @@ const Navigation = () => {
                   Recent Events
                 </Link>
               </ListItem>
-              <ListItem className="text-xl font-semibold text-white">
-                <Link
-                  onClick={() => setToggle(false)}
-                  to="/pricing"
-                  className=""
-                >
-                  Pricing
-                </Link>
-              </ListItem>
-              <ListItem className="text-xl font-semibold text-white">
+              <ListItem className="text-3xl font-medium text-white lg:text-lg xl:text-xl xl:font-semibold">
                 <Link
                   onClick={() => setToggle(false)}
                   to="/bridalspecial"
@@ -113,7 +104,17 @@ const Navigation = () => {
                   Bridal Special
                 </Link>
               </ListItem>
-              <ListItem className="text-xl font-semibold text-white">
+              <ListItem className="text-3xl font-medium text-white lg:text-lg xl:text-xl xl:font-semibold">
+                <Link
+                  onClick={() => setToggle(false)}
+                  to="/pricing"
+                  className=""
+                >
+                  Pricing
+                </Link>
+              </ListItem>
+
+              <ListItem className="text-3xl font-medium text-white lg:text-lg xl:text-xl xl:font-semibold">
                 <Link
                   onClick={() => setToggle(false)}
                   to="/contact"

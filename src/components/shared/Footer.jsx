@@ -36,9 +36,10 @@ const Footer = () => {
 
             <div className="mt-5">
               <p className="text-justify text-lg font-medium text-white">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore
-                sed exercitationem optio distinctio! Dignissimos earum quasi
-                nobis soluta nostrum, deserunt
+                At noyon puspo beli event management, we bring 15 years of
+                industry experience to every project. Every event is crafted
+                with care, precision, and creativity to reflect your unique
+                personality and style
               </p>
             </div>
           </div>
@@ -88,16 +89,22 @@ const Footer = () => {
                 <Link to="/">Home</Link>
               </ListItem>
               <ListItem className="mb-2 flex items-center gap-1 text-base font-semibold text-white">
-                <Link to="/">About</Link>
+                <Link to="/about">About</Link>
               </ListItem>
               <ListItem className="mb-2 flex items-center gap-1 text-base font-semibold text-white">
-                <Link to="/">Recent Events</Link>
+                <Link to="/services">Services</Link>
               </ListItem>
               <ListItem className="mb-2 flex items-center gap-1 text-base font-semibold text-white">
-                <Link to="/">Collaborators</Link>
+                <Link to="/events">Recent Events</Link>
               </ListItem>
               <ListItem className="mb-2 flex items-center gap-1 text-base font-semibold text-white">
-                <Link to="/">Contact</Link>
+                <Link to="/bridalspecial">Bridal Special</Link>
+              </ListItem>
+              <ListItem className="mb-2 flex items-center gap-1 text-base font-semibold text-white">
+                <Link to="/pricing">Pricing</Link>
+              </ListItem>
+              <ListItem className="mb-2 flex items-center gap-1 text-base font-semibold text-white">
+                <Link to="/contact">Contact</Link>
               </ListItem>
             </List>
           </div>

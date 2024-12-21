@@ -69,7 +69,7 @@ const Gallery = () => {
       <Container>
         <Flex className="flex-col gap-10 md:flex-row">
           <div data-aos="fade-right" className="w-full md:w-1/2">
-            <h2 className="mb-5 text-xl font-bold leading-[40px] text-primary xl:text-2xl 2xl:text-3xl">
+            <h2 className="mb-5 text-xl font-bold leading-[25px] text-primary lg:leading-[40px] xl:text-2xl 2xl:text-3xl">
               Arrange program in your own way, we make it hassle free and
               affordable for you.
             </h2>
@@ -86,12 +86,20 @@ const Gallery = () => {
               life. Your goals, your way – made easy and accessible by us.
             </p>
 
-            <Link
-              to="/events"
-              className="mt-10 inline-flex items-center gap-2 rounded-lg border-[3px] border-black px-10 py-3 text-sm font-semibold text-black duration-300 ease-in-out hover:gap-4 hover:border-primary hover:bg-primary hover:text-white xl:text-base 2xl:text-lg"
-            >
-              View Our Events <FaArrowRight />
-            </Link>
+            <Flex className="mt-10 items-center justify-between gap-2 md:justify-start">
+              <Link
+                to="/events"
+                className="inline-flex items-center gap-2 rounded-lg border-[3px] border-black px-5 py-3 text-sm font-semibold text-black duration-300 ease-in-out hover:gap-4 hover:border-primary hover:bg-primary hover:text-white lg:px-10 xl:text-base 2xl:text-lg"
+              >
+                View Our Events <FaArrowRight />
+              </Link>
+              <Link
+                to="/pricing"
+                className="inline-flex items-center gap-2 rounded-lg border-[3px] border-black px-5 py-3 text-sm font-semibold text-black duration-300 ease-in-out hover:gap-4 hover:border-primary hover:bg-primary hover:text-white lg:px-10 xl:text-base 2xl:text-lg"
+              >
+                Explore our pricing <FaArrowRight />
+              </Link>
+            </Flex>
           </div>
 
           <div data-aos="zoom-in-down" className="w-full md:w-1/2">
