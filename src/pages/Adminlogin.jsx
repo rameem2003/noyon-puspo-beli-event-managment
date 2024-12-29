@@ -63,12 +63,12 @@ const Adminlogin = () => {
   });
 
   return (
-    <main className="flex h-screen w-full items-center justify-between">
-      <div className="hidden h-full w-full items-center justify-center bg-primary md:flex md:w-1/2">
+    <main className="relative flex h-screen w-full items-center justify-between">
+      <div className="hidden h-full w-full items-center justify-center bg-primary md:w-1/2 lg:flex">
         <Image src="/footerlogo.png" alt="logo" />
       </div>
 
-      <div className="flex w-full items-center justify-center md:w-1/2">
+      <div className="flex w-full items-center justify-center lg:w-1/2">
         <form
           onSubmit={handleLogin}
           action=""
@@ -134,9 +134,9 @@ const Adminlogin = () => {
         </form>
       </div>
 
-      <p className="fixed bottom-1 left-[50%] w-full translate-x-[-50%] text-center text-sm font-semibold md:bottom-2 md:right-2 md:text-right">
+      <span className="absolute bottom-2 right-2 text-sm font-semibold">
         Software Developer: Mahmood Hassan Rameem || ROL Studio
-      </p>
+      </span>
     </main>
   );
 };
