@@ -4,7 +4,7 @@ import Image from "../components/common/Image";
 import ButtonAnimation from "../components/common/ButtonAnimation";
 import { signin } from "../redux/features/AdminAuthSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IoEye, IoEyeOff } from "react-icons/io5";
 
 const Adminlogin = () => {
@@ -51,6 +51,7 @@ const Adminlogin = () => {
         navigate("/admin/home");
       }
     } catch (error) {
+      setErr("Credentials not matched, Try again");
       setLoading(false);
       console.log(error);
     }
@@ -78,7 +79,9 @@ const Adminlogin = () => {
             Welcome Admin, Login Here
           </h2>
 
-          {err && <p className="text-lg font-bold text-red-500">{err}</p>}
+          {err && (
+            <p className="text-center text-lg font-bold text-red-500">{err}</p>
+          )}
 
           <div className="mb-5 w-full">
             <label className="text-base font-medium text-black" htmlFor="">
@@ -131,6 +134,19 @@ const Adminlogin = () => {
               Login
             </button>
           )}
+
+          <div className="relative my-10 h-[2px] w-full bg-gray-300">
+            <span className="absolute left-[50%] top-[-10px] translate-x-[-50%] bg-white px-4 text-base font-bold text-black">
+              OR
+            </span>
+          </div>
+
+          <Link
+            className="block w-full bg-slate-800 p-3 text-center text-lg font-medium text-white"
+            to="/"
+          >
+            Go To Home
+          </Link>
         </form>
       </div>
 

@@ -25,6 +25,10 @@ export const services = [
     thumb: "/slides/slide15.jpg",
   },
   {
+    title: "Kawali Show",
+    thumb: "/slides/slide17.jpg",
+  },
+  {
     title: "Music, Sound System and Band show",
     thumb: "/slides/slide13.jpg",
   },
