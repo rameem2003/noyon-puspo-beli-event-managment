@@ -91,6 +91,8 @@ export const packages = {
         "Unlimited microphones",
         "Unlimited short cables",
         "Unlimited guitar cables",
+        "Band Musician (Member-06)",
+        "Kawali Musician (Member-06)",
       ],
     },
     {
@@ -107,6 +109,8 @@ export const packages = {
         "Unlimited Microphones",
         "Unlimited Short Cables",
         "Unlimited Keyboard Cables",
+        "Band Musician (Member-06)",
+        "Kawali Musician (Member-06)",
       ],
     },
   ],
