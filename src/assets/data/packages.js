@@ -132,4 +132,43 @@ export const packages = {
       ],
     },
   ],
+
+  living_room_decoration: [
+    {
+      name: "🟩 Package 1",
+      price: "8,499 BDT",
+      color: "hover:bg-green-600 border-green-600",
+      textColor: "text-green-600",
+      button: "bg-green-600",
+      packageID: "living-room-decor-pack1",
+      thumb: "/pricing-list-image/living-room1.jpg",
+      features: [
+        "Multicolor Flower",
+        "Rojonigandha flower Chain",
+        "14 pcs flower small bouquet",
+        "Flower Papri",
+        "Stand Piller",
+        "Stand Tissue Clothing",
+      ],
+    },
+
+    {
+      name: "🟦 Package 2",
+      price: "13,499 BDT",
+      color: "hover:bg-blue-600 border-blue-600",
+      textColor: "text-blue-600",
+      button: "bg-blue-600",
+      packageID: "living-room-decor-pack2",
+      thumb: "/pricing-list-image/living-room2.jpg",
+      features: [
+        "Multicolor Flower",
+        "Rojonigandha flower Chain",
+        "10 pcs flower bit",
+        "8 pis Flower small bouquet",
+        "Flower Papri",
+        "Stand Piller",
+        "Stand Tissue Clothing",
+      ],
+    },
+  ],
 };

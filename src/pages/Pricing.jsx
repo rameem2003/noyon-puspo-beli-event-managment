@@ -208,6 +208,72 @@ const Pricing = () => {
             </Flex>
           </div>
 
+          <div className="container mx-auto px-4 py-8">
+            <h3 className="my-5 text-center text-5xl font-bold text-primary">
+              Living Room Decoration
+            </h3>
+
+            <p className="mt-4 text-center text-xl font-medium text-black">
+              Celebrate the beginning of a new journey with a living room décor
+              that exudes charm, elegance, and personalized beauty.
+            </p>
+
+            <div className="my-5 rounded-lg border bg-gray-100 p-6 shadow-md">
+              <p className="text-lg font-semibold text-red-500">🌺 Note:</p>
+              <p className="mt-2 text-lg">
+                All are available only Dhaka, Mirpur city! If you customised the
+                decoration, extra price will be charged !
+              </p>
+
+              <p className="mt-2 text-lg">
+                If there is no lift, we provide service up to the maximum 2
+                floor house. If the house is above 2 floors, additional labor
+                charges will have to be paid.
+              </p>
+            </div>
+
+            <Flex className="mt-5 flex-wrap gap-5 xl:flex-nowrap">
+              {packages.living_room_decoration.map((item, i) => (
+                <div
+                  key={i}
+                  data-aos="fade-up"
+                  data-aos-duration="3000"
+                  className={`group mb-8 w-full rounded-lg border-2 ${item.color} bg-white p-6 shadow-md duration-300 ease-in-out sm:w-[48%] lg:w-[30%] xl:w-[23%]`}
+                >
+                  <h2
+                    className={`text-2xl font-bold ${item.textColor} group-hover:text-white`}
+                  >
+                    {item.name}
+                  </h2>
+
+                  <h3
+                    className={`text-2xl font-extrabold ${item.textColor} group-hover:text-white`}
+                  >
+                    {item.price}
+                  </h3>
+
+                  <button
+                    onClick={() => bookNow(item)}
+                    className={`my-2 w-full rounded-md border-[2px] border-white ${item.button} p-3 text-xl font-semibold text-white`}
+                  >
+                    Book Now
+                  </button>
+
+                  <p className="mt-4 text-lg font-medium group-hover:text-white">
+                    What’s included:
+                  </p>
+                  <ul className="mt-2 list-disc space-y-2 pl-6 text-lg">
+                    {item.features.map((d, i) => (
+                      <li key={i} className="text-black group-hover:text-white">
+                        ➡ {d}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </Flex>
+          </div>
+
           <div className="my-5 rounded-lg border bg-gray-100 p-6 shadow-md">
             <p className="text-lg font-semibold text-red-500">🌺 Note:</p>
             <p className="mt-2 text-lg">
