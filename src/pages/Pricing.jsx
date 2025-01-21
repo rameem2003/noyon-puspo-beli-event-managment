@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { pushBooking } from "../redux/features/BookingSlice";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "./../components/common/Image";
 const Pricing = () => {
   const dispatch = useDispatch(); // dispatch instance
   const navigate = useNavigate(); // navigate instance
@@ -240,6 +241,11 @@ const Pricing = () => {
                   data-aos-duration="3000"
                   className={`group mb-8 w-full rounded-lg border-2 ${item.color} bg-white p-6 shadow-md duration-300 ease-in-out sm:w-[48%] lg:w-[30%] xl:w-[23%]`}
                 >
+                  <Image
+                    className="mb-5 rounded-md"
+                    src={item.thumb}
+                    alt={item.thumb}
+                  />
                   <h2
                     className={`text-2xl font-bold ${item.textColor} group-hover:text-white`}
                   >
