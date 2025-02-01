@@ -255,30 +255,38 @@ const CheckoutPage = () => {
                   className={`group mb-8 w-full rounded-lg border-2 ${data.color} w-full bg-white p-6 shadow-md duration-300 ease-in-out`}
                 >
                   <h2
-                    className={`text-2xl font-bold ${data.textColor} group-hover:text-white`}
+                    className={`text-2xl font-bold capitalize ${data.textColor} group-hover:text-white`}
                   >
                     {data.name} ({data.packageID})
                   </h2>
+                  <h2
+                    className={`text-xl font-bold capitalize ${data.textColor} group-hover:text-white`}
+                  >
+                    {data.title}
+                  </h2>
 
                   <h3
-                    className={`text-2xl font-extrabold ${data.textColor} group-hover:text-white`}
+                    className={`text-2xl font-extrabold capitalize ${data.textColor} group-hover:text-white`}
                   >
                     {data.price}
                   </h3>
 
-                  <p className="mt-4 text-lg font-medium group-hover:text-white">
+                  <p className="mt-4 text-lg font-medium capitalize group-hover:text-white">
                     What’s included:
                   </p>
                   <ul className="mt-2 list-disc space-y-2 pl-6 text-lg">
                     {data.features.map((d, i) => (
-                      <li key={i} className="text-black group-hover:text-white">
+                      <li
+                        key={i}
+                        className="capitalize text-black group-hover:text-white"
+                      >
                         ➡ {d}
                       </li>
                     ))}
                   </ul>
                 </div>
               ) : (
-                <h3 className="text-lg font-bold text-red-600">
+                <h3 className="text-lg font-bold capitalize text-red-600">
                   You didn't chose any package to booking
                 </h3>
               )}
