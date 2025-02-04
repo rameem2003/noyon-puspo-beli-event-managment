@@ -25,10 +25,10 @@ const Banner = () => {
             </p>
 
             <Link
-              to="/contact"
+              to="/pricing"
               className="mt-10 inline-flex items-center gap-2 rounded-lg border-[3px] border-white px-10 py-3 text-sm font-semibold text-white duration-300 ease-in-out hover:gap-4 hover:bg-white hover:text-black xl:text-base 2xl:text-lg"
             >
-              Contact Now <FaArrowRight />
+              See Price & Plans <FaArrowRight />
             </Link>
           </div>
 

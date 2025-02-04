@@ -39,13 +39,13 @@ const Gallery = () => {
                 width: "12px",
                 height: "12px",
                 borderRadius: "100%",
-                backgroundColor: "black",
+                backgroundColor: "#856702",
               }
             : {
                 width: "12px",
                 height: "12px",
                 borderRadius: "100%",
-                backgroundColor: "gray",
+                backgroundColor: "white",
               }
         }
       >
