@@ -194,7 +194,7 @@ const Footer = () => {
             className="text-white"
             href="https://www.facebook.com/rolstudiobangladesh"
           >
-            &copy; Developed by Mahmood Hassan Rameem || ROL Studio || 2024
+            &copy; Noyon Puspo Beli Event Management || Developed by ROL Studio Bangladesh || 2024
           </a>
         </div>
       </Container>
